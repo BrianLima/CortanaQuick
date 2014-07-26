@@ -1,0 +1,35 @@
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Debug\Assets\ApplicationIcon.png
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Debug\Cortana Quick.dll
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Debug\Cortana Quick.pdb
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Debug\resources.pri
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Debug\AppxManifest.xml
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Debug\Cortana Quick.build.appxrecipe
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Debug\Properties\WMAppManifest.xml
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Debug\AppManifest.xaml
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Debug\Cortana_Quick_Debug_AnyCPU.xap
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\App.g.cs
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\MainPage.g.cs
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\Cortana Quick.g.resources
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\Cortana_Quick.Resources.AppResources.resources
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\Cortana Quick.csproj.GenerateResource.Cache
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\Cortana Quick.dll
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\Cortana Quick.pdb
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\priconfig.xml
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\priconfig.xml.intermediate
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\layout.resfiles
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\layout.resfiles.intermediate
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\resources.resfiles
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\resources.resfiles.intermediate
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\pri.resfiles
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\pri.resfiles.intermediate
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\qualifiers.txt
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\qualifiers.txt.intermediate
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\ProjectArchitectures.txt
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\MDILProjectFiles.xml
+c:\users\brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\XapCacheFile.xml
