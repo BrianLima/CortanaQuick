@@ -4,7 +4,7 @@ namespace QuickDatabase
 {
     class DataBaseContext : DataContext
     {
-        public static const string ConnectionString = "Data Source = isostore:/notes.sdf";
+        public const string ConnectionString = "Data Source = isostore:/notes.sdf";
 
         private Table<Notes> notes;
         public Table<Notes> Notes

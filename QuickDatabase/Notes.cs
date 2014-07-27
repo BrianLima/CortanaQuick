@@ -8,7 +8,7 @@ namespace QuickDatabase
     public class Notes
     {
         private int _id;
-        [Column(Name = "id", IsPrimaryKey = true, IsDbGenerated=true, CanBeNull=false)]
+        [Column(Name = "id", IsPrimaryKey = true, IsDbGenerated = true, CanBeNull = false)]
         public int id { get { return _id; } set { _id = value; } }
 
         private string _note;
@@ -23,6 +23,12 @@ namespace QuickDatabase
         {
             DaoNotes daoNotes = new DaoNotes();
             return daoNotes.GetAllNotes();
+        }
+
+        public bool Save()
+        {
+            DaoNotes daoNotes = new DaoNotes();
+            return daoNotes.Save(this);
         }
     }
 }

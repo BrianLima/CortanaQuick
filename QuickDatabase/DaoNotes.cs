@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace QuickDatabase
@@ -15,7 +16,28 @@ namespace QuickDatabase
                         select notes).ToList();
             }
             return data;
-        
+        }
+
+        /// <summary>
+        /// Salva um card para o banco de dados
+        /// </summary>
+        /// <param name="note"></param>
+        /// <returns>bool</returns>
+        public bool Save(Notes note)
+        {
+            try
+            {
+                using (DataBaseContext db = new DataBaseContext(DataBaseContext.ConnectionString))
+                {
+                    db.Notes.InsertOnSubmit(note);
+                    db.SubmitChanges();
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

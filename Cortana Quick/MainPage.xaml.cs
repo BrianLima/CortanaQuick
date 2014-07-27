@@ -10,6 +10,7 @@ using Microsoft.Phone.Shell;
 using Cortana_Quick.Resources;
 using Windows.Phone.Speech.VoiceCommands;
 using System.Threading.Tasks;
+using QuickDatabase;
 
 namespace Cortana_Quick
 {
@@ -40,50 +41,79 @@ namespace Cortana_Quick
         //    ApplicationBar.MenuItems.Add(appBarMenuItem);
         //}
 
+        /// <summary>
+        /// We need to check if the app called by Cortana and then handle the voice commands, else whe install the voice commands
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            // if Cortana opened the app
             if (e.NavigationMode == NavigationMode.New)
             {
                 string voiceCommandName;
-
-                // if voice commands are installed and available
                 if (NavigationContext.QueryString.TryGetValue("voiceCommandName", out voiceCommandName))
                 {
                     HandleVoiceCommand(voiceCommandName);
                 }
                 else
                 {
-                    // if this is the first run of the app - voice commands unavailable
                     Task.Run(() => InstallVoiceCommands());
                 }
             }
-            // if we navigated to the app by resume from suspension etc.
-            else { }
 
             base.OnNavigatedTo(e);
         }
 
+        //After identifying the voice activation we need to check if it is a Note or Ask Command
         private void HandleVoiceCommand(string voiceCommandName)
         {
             string result;
             if (NavigationContext.QueryString.TryGetValue("NoteKeyWords", out result))
             {
-
+                if (HandleConnectionProblems(result))
+                {
+                    HandleNoteCommands(result);
+                }
             }
             else if (NavigationContext.QueryString.TryGetValue("AskKeyWords", out result))
             {
-                
+                if (HandleConnectionProblems(result))
+                {
+
+                }
             }
         }
 
         /// <summary>
-        /// Appends voice commands to Cortana
+        /// We found a note command, so we save it
+        /// </summary>
+        /// <param name="note"></param>
+        private void HandleNoteCommands(string text)
+        {
+            Notes note = new Notes();
+                note.date = DateTime.Now;
+                note.note = text;
+        }
+        
+        /// <summary>
+        /// If Cortana gave us a Null or empty string or ... there was a connection problem 
+        /// </summary>
+        /// <param name="text">The string Cortana gave us</param>
+        /// <returns>false if a connection problem as found || true if everything is ok </returns>
+        private Boolean HandleConnectionProblems(string text)
+        {
+            if (String.IsNullOrEmpty(text) || text == "...")
+            {
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Install the voice commands to Cortana
         /// </summary>
         private async void InstallVoiceCommands()
         {
             const string Path = "ms-appx:///VoiceDefinition.xml";
-
             try
             {
                 Uri file = new Uri(Path, UriKind.Absolute);

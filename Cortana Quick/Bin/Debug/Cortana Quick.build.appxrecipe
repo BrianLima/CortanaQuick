@@ -19,6 +19,9 @@
     <AppxPackagedFile Include="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Debug\Cortana Quick.dll">
       <PackagePath>Cortana Quick.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\QuickDatabase\Bin\Debug\QuickDatabase.dll">
+      <PackagePath>QuickDatabase.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\AlignmentGrid.png">
       <PackagePath>Assets\AlignmentGrid.png</PackagePath>
     </AppxPackagedFile>
