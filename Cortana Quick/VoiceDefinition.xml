@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Be sure to use the new v1.1 namespace to utilize the new PhraseTopic feature -->
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.1">
+  <!-- The CommandSet Name is used to programmatically access the CommandSet -->
+
+  <CommandSet xml:lang="en-us" Name="englishQuickCortana">
+    <!-- The CommandPrefix provides an alternative to your full app name for invocation -->
+    <!-- Do me a favour and choose something else for your app name :) -->
+    <CommandPrefix>Quick</CommandPrefix>
+
+    <!-- The CommandSet Example appears in the global help alongside your app name -->
+    <Example>Left my car at sesame street</Example>
+
+    <Command Name="NoteCommands">
+      <Example> Left my car at sesame street </Example>
+      <ListenFor>{NoteKeyWords}</ListenFor>
+      <Feedback> Noting this... </Feedback>
+      <Navigate Target="MainPage.xaml" />
+    </Command>
+
+    <Command Name="AskCommands">
+      <Example> Where is my car </Example>
+      <ListenFor>{AskKeyWords}[speech]</ListenFor>
+      <Feedback> Checking this iformation... </Feedback>
+      <Navigate Target="MainPage.xaml" />
+    </Command>
+    
+    <PhraseTopic Label="NoteKeyWords" Scenario="Natural Language">
+      <Subject>Left</Subject>
+      <Subject>Parked</Subject>
+    </PhraseTopic>
+
+    <PhraseTopic Label="AskKeyWords" Scenario="Natural Language">
+      <Subject>Where</Subject>
+    </PhraseTopic>
+
+  </CommandSet>
+
+</VoiceCommands>

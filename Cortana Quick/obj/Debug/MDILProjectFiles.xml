@@ -15,6 +15,7 @@
     <File>Assets\Tiles\FlipCycleTileSmall.png</File>
     <File>Assets\Tiles\IconicTileMediumLarge.png</File>
     <File>Assets\Tiles\IconicTileSmall.png</File>
+    <File>VoiceDefinition.xml</File>
     <File>AppManifest.xaml</File>
     <File>Assets\ApplicationIcon.png</File>
     <File>Assets\Tiles\FlipCycleTileMedium.png</File>

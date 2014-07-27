@@ -24,7 +24,7 @@
   <Applications>
     <Application Id="App" Executable="AGHost.exe" EntryPoint="MainPage.xaml">
       <m3:VisualElements DisplayName="Cortana Quick" Square150x150Logo="Assets\SquareTile150x150.png" Square44x44Logo="Assets\Logo.png" Description="Cortana Quick" ForegroundText="light" BackgroundColor="#464646">
-        <m3:DefaultTile Square71x71Logo="Assets\SquareTile71x71.png" />
+        <m3:DefaultTile Square71x71Logo="Assets\SquareTile71x71.png"></m3:DefaultTile>
         <m3:SplashScreen Image="Assets\SplashScreen.png" />
       </m3:VisualElements>
       <Extensions>
@@ -36,7 +36,9 @@
       </Extensions>
     </Application>
   </Applications>
-  <Capabilities></Capabilities>
+  <Capabilities>
+    <DeviceCapability Name="microphone" />
+  </Capabilities>
   <Extensions>
     <Extension Category="windows.activatableClass.inProcessServer">
       <InProcessServer>

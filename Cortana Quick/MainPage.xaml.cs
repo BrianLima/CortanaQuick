@@ -8,6 +8,8 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Cortana_Quick.Resources;
+using Windows.Phone.Speech.VoiceCommands;
+using System.Threading.Tasks;
 
 namespace Cortana_Quick
 {
@@ -37,5 +39,61 @@ namespace Cortana_Quick
         //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
         //    ApplicationBar.MenuItems.Add(appBarMenuItem);
         //}
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            // if Cortana opened the app
+            if (e.NavigationMode == NavigationMode.New)
+            {
+                string voiceCommandName;
+
+                // if voice commands are installed and available
+                if (NavigationContext.QueryString.TryGetValue("voiceCommandName", out voiceCommandName))
+                {
+                    HandleVoiceCommand(voiceCommandName);
+                }
+                else
+                {
+                    // if this is the first run of the app - voice commands unavailable
+                    Task.Run(() => InstallVoiceCommands());
+                }
+            }
+            // if we navigated to the app by resume from suspension etc.
+            else { }
+
+            base.OnNavigatedTo(e);
+        }
+
+        private void HandleVoiceCommand(string voiceCommandName)
+        {
+            string result;
+            if (NavigationContext.QueryString.TryGetValue("NoteKeyWords", out result))
+            {
+
+            }
+            else if (NavigationContext.QueryString.TryGetValue("AskKeyWords", out result))
+            {
+                
+            }
+        }
+
+        /// <summary>
+        /// Appends voice commands to Cortana
+        /// </summary>
+        private async void InstallVoiceCommands()
+        {
+            const string Path = "ms-appx:///VoiceDefinition.xml";
+
+            try
+            {
+                Uri file = new Uri(Path, UriKind.Absolute);
+
+                await VoiceCommandService.InstallCommandSetsFromFileAsync(file);
+            }
+            catch (Exception vcdEx)
+            {
+                MessageBox.Show(vcdEx.Message);
+            }
+        }
     }
 }

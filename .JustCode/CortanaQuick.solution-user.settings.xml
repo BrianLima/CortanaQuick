@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<JustCodeSettings Version="0.0" Timestamp="6a3c3cee-2da2-4033-a180-7df73ebb0c1b">
+  <IgnoredErrorsAndWarningsSettings xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <IgnoredErrorsAndWarnings Version="2">
+      <FilePath>
+        <FileRelativePath>Cortana%20Quick/MainPage.xaml.cs</FileRelativePath>
+        <ProjectRelativePath>Cortana%20Quick/Cortana%20Quick.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>4794185389943516077</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+    </IgnoredErrorsAndWarnings>
+  </IgnoredErrorsAndWarningsSettings>
+</JustCodeSettings>
