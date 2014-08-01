@@ -47,7 +47,7 @@ namespace Cortana_Quick
         /// <param name="e"></param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            if (e.NavigationMode == NavigationMode.New)
+            //if (e.NavigationMode == NavigationMode.New)
             {
                 string voiceCommandName;
                 if (NavigationContext.QueryString.TryGetValue("voiceCommandName", out voiceCommandName))
@@ -78,7 +78,7 @@ namespace Cortana_Quick
             {
                 if (HandleConnectionProblems(result))
                 {
-
+                    //ToDo handle ask commands
                 }
             }
         }
@@ -90,8 +90,9 @@ namespace Cortana_Quick
         private void HandleNoteCommands(string text)
         {
             Notes note = new Notes();
-                note.date = DateTime.Now;
-                note.note = text;
+            note.date = DateTime.Now;
+            note.note = text;
+            note.Save();
         }
         
         /// <summary>
