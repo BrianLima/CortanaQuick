@@ -7,14 +7,15 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    d:DesignHeight="120" d:DesignWidth="480">
+    d:DesignHeight="110" d:DesignWidth="480">
 
     <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="457*"/>
-            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="218*"/>
+            <ColumnDefinition Width="11*"/>
         </Grid.ColumnDefinitions>
-        <TextBox Height="72" Margin="10,0" TextWrapping="Wrap" Text="{Binding text}" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <TextBlock HorizontalAlignment="Left" Margin="270,72,0,0" TextWrapping="{Binding date}" Text="dd/MM/yyyy hh/mm" VerticalAlignment="Top" Width="187"/>
+        <TextBox Height="72" Margin="10,0" TextWrapping="Wrap" Text="{Binding note}" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <TextBlock Margin="248,77,0,0" TextWrapping="{Binding date}" Text="dd/MM/yyyy hh/mm" VerticalAlignment="Top" Grid.Column="1" Height="27"/>
     </Grid>
 </UserControl>

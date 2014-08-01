@@ -21,8 +21,8 @@ namespace Cortana_Quick
         {
             InitializeComponent();
 
-            // Sample code to localize the ApplicationBar
-            //BuildLocalizedApplicationBar();
+            Notes notes = new Notes();
+            NotesList.ItemsSource = notes.GetAllNotes();
         }
 
         // Sample code for building a localized ApplicationBar
@@ -125,6 +125,11 @@ namespace Cortana_Quick
             {
                 MessageBox.Show(vcdEx.Message);
             }
+        }
+
+        private void NoteDetailClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
