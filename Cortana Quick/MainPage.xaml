@@ -50,18 +50,19 @@
             <ListBox Height="Auto" x:Name="NotesList" Width="420">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel>
+                        <Grid HorizontalAlignment="Left">
                             <toolkit:ContextMenuService.ContextMenu>
                                 <toolkit:ContextMenu>
                                     <toolkit:MenuItem Header="View detail" Click="NoteDetailClick"/>
                                 </toolkit:ContextMenu>
                             </toolkit:ContextMenuService.ContextMenu>
-                            <Cortana_Quick:NoteControl x:Name="NoteControl"/>
-                        </StackPanel>
+                            <Cortana_Quick:NoteControl x:Name="NoteControl" Margin="10,10,10,10" HorizontalAlignment="Left"/>
+                        </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
         </StackPanel>
+        
     </Grid>
 
 </phone:PhoneApplicationPage>

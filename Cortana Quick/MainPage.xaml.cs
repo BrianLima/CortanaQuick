@@ -20,9 +20,6 @@ namespace Cortana_Quick
         public MainPage()
         {
             InitializeComponent();
-
-            Notes notes = new Notes();
-            NotesList.ItemsSource = notes.GetAllNotes();
         }
 
         // Sample code for building a localized ApplicationBar
@@ -61,6 +58,9 @@ namespace Cortana_Quick
             }
 
             base.OnNavigatedTo(e);
+
+            Notes notes = new Notes();
+            NotesList.ItemsSource = notes.GetAllNotes();
         }
 
         //After identifying the voice activation we need to check if it is a Note or Ask Command

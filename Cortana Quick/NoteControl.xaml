@@ -7,15 +7,17 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    d:DesignHeight="110" d:DesignWidth="480">
+    d:DesignHeight="110" d:DesignWidth="381.481"
+    HorizontalAlignment="Left">
 
-    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}">
+    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}" HorizontalAlignment="Left" Width="381">
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="11*"/>
-            <ColumnDefinition Width="218*"/>
-            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBox Height="72" Margin="10,0" TextWrapping="Wrap" Text="{Binding note}" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
-        <TextBlock Margin="248,77,0,0" TextWrapping="{Binding date}" Text="dd/MM/yyyy hh/mm" VerticalAlignment="Top" Grid.Column="1" Height="27"/>
+        <TextBox Height="72" Margin="1,0,3,0" TextWrapping="Wrap" Text="{Binding note}" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBlock Margin="0,72,0,0" Text="{Binding date}" VerticalAlignment="Top" Grid.Column="1" Height="27" HorizontalAlignment="Left" Width="321"/>
     </Grid>
 </UserControl>
