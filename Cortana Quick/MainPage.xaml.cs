@@ -44,6 +44,7 @@ namespace Cortana_Quick
         /// <param name="e"></param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            //ToDo Fix double navigation, somehow the app is calling OnNavigated two times after resuming
             //if (e.NavigationMode == NavigationMode.New)
             {
                 string voiceCommandName;

@@ -12,7 +12,7 @@ namespace QuickDatabase
             using (DataBaseContext db = new DataBaseContext(DataBaseContext.ConnectionString))
             {
                 data = (from notes in db.Notes
-                        orderby notes.date
+                        orderby notes.date descending
                         select notes).ToList();
             }
             return data;
