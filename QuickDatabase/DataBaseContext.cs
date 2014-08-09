@@ -17,8 +17,7 @@ namespace QuickDatabase
             }
         }
 
-        public DataBaseContext(string connectionString)
-            : base(connectionString)
+        public DataBaseContext(string connectionString): base(connectionString)
         {
             if (!this.DatabaseExists())
             {

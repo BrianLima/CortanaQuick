@@ -80,7 +80,21 @@ namespace Cortana_Quick
                 if (HandleConnectionProblems(result))
                 {
                     //ToDo handle ask commands
+                    HandleAskCommands(result);
                 }
+            }
+        }
+
+        private void HandleAskCommands(string question)
+        {
+            string[] words = question.Split(' ');
+            List<String> results = new List<string>();
+            Notes note = new Notes();
+            List<Notes> FoundNotes = new List<Notes>();
+            
+            for (int i = 0; i < words.Length; i++)
+            {
+                results.AddRange(note.GetSimilarNotes(words[i]));
             }
         }
 
@@ -90,10 +104,12 @@ namespace Cortana_Quick
         /// <param name="note"></param>
         private void HandleNoteCommands(string text)
         {
+            //ToDo Write a verification method to make sure that Cortana and our user are friends
             Notes note = new Notes();
             note.date = DateTime.Now;
             note.note = text;
             note.Save();
+            note = null;
         }
         
         /// <summary>
@@ -132,5 +148,7 @@ namespace Cortana_Quick
         {
 
         }
+
+        public Notes FoundNotes { get; set; }
     }
 }

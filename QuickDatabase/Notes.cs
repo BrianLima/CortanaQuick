@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Data.Linq.Mapping;
 
 namespace QuickDatabase
 {
+    /// <summary>
+    /// Data structure for notes storage
+    /// </summary>
     [Table(Name = "Notes")]
     public class Notes
     {
@@ -25,6 +29,12 @@ namespace QuickDatabase
             return daoNotes.GetAllNotes();
         }
 
+        public IEnumerable<string> GetSimilarNotes(string keyword)
+        {
+            DaoNotes daoNotes = new DaoNotes();
+            return daoNotes.GetSimilarNotes(keyword);
+        }
+        
         public bool Save()
         {
             DaoNotes daoNotes = new DaoNotes();
