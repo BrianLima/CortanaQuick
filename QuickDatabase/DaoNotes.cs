@@ -12,12 +12,11 @@ namespace QuickDatabase
             List<Notes> data = new List<Notes>();
             using (DataBaseContext db = new DataBaseContext(DataBaseContext.ConnectionString))
             {
-                yield return null;
                 data = (from notes in db.Notes
                         orderby notes.date descending
                         select notes).ToList();
             }
-            //return data;
+            return data;
         }
 
         public bool Save(Notes note)

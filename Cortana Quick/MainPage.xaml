@@ -53,7 +53,8 @@
                         <Grid HorizontalAlignment="Left">
                             <toolkit:ContextMenuService.ContextMenu>
                                 <toolkit:ContextMenu>
-                                    <toolkit:MenuItem Header="View detail" Click="NoteDetailClick"/>
+                                    <toolkit:MenuItem Header="view detail" Click="NoteDetailClick"/>
+                                    <toolkit:MenuItem Header="delete note" Click="MenuItem_Click"/>
                                 </toolkit:ContextMenu>
                             </toolkit:ContextMenuService.ContextMenu>
                             <Cortana_Quick:NoteControl x:Name="NoteControl" Margin="10,10,10,10" HorizontalAlignment="Left"/>

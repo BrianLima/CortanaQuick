@@ -11,6 +11,8 @@ using Cortana_Quick.Resources;
 using Windows.Phone.Speech.VoiceCommands;
 using System.Threading.Tasks;
 using QuickDatabase;
+using Windows.Phone.Speech.Synthesis;
+using Windows.Phone.Speech.Recognition;
 
 namespace Cortana_Quick
 {
@@ -21,6 +23,9 @@ namespace Cortana_Quick
         {
             InitializeComponent();
         }
+
+        SpeechSynthesizer talk;
+
 
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()
@@ -85,16 +90,24 @@ namespace Cortana_Quick
             }
         }
 
-        private void HandleAskCommands(string question)
+        private async void HandleAskCommands(string question)
         {
             string[] words = question.Split(' ');
             List<String> results = new List<string>();
             Notes note = new Notes();
-            List<Notes> FoundNotes = new List<Notes>();
             
             for (int i = 0; i < words.Length; i++)
             {
                 results.AddRange(note.GetSimilarNotes(words[i]));
+            }
+
+            try
+            {
+                await talk.SpeakTextAsync(results[0]);
+            }
+            catch (Exception exception)
+            {
+                throw new Exception("Error when trying to use TTS", exception);
             }
         }
 
@@ -102,14 +115,19 @@ namespace Cortana_Quick
         /// We found a note command, so we save it
         /// </summary>
         /// <param name="note"></param>
-        private void HandleNoteCommands(string text)
+        private async void HandleNoteCommands(string text)
         {
+            var a = MessageBox.Show(text, "Heard you say:", MessageBoxButton.OKCancel);
+
             //ToDo Write a verification method to make sure that Cortana and our user are friends
-            Notes note = new Notes();
-            note.date = DateTime.Now;
-            note.note = text;
-            note.Save();
-            note = null;
+            if (a != MessageBoxResult.Cancel)
+            {
+                Notes note = new Notes();
+                note.date = DateTime.Now;
+                note.note = text;
+                note.Save();
+                note = null;
+            }
         }
         
         /// <summary>
@@ -149,6 +167,9 @@ namespace Cortana_Quick
 
         }
 
-        public Notes FoundNotes { get; set; }
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
