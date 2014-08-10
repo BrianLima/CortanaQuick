@@ -47,5 +47,24 @@ namespace QuickDatabase
                 return new ObservableCollection<string>(data);
             }
         }
+
+        public bool DestroyOldNotes(int days)
+        {
+            var ok;
+            try
+            {
+                using (DataBaseContext db = new DataBaseContext(DataBaseContext.ConnectionString))
+                {
+                    var destroy = db.Notes.Where(t => t.date < DateTime.Now.AddDays(-days)).ToList();
+                    db.Notes.DeleteAllOnSubmit(destroy);
+                    db.SubmitChanges();
+                    return true;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

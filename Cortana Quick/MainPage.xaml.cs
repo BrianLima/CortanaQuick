@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Navigation;
-using Microsoft.Phone.Controls;
+﻿using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using Cortana_Quick.Resources;
-using Windows.Phone.Speech.VoiceCommands;
-using System.Threading.Tasks;
 using QuickDatabase;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Navigation;
 using Windows.Phone.Speech.Synthesis;
-using Windows.Phone.Speech.Recognition;
+using Windows.Phone.Speech.VoiceCommands;
 
 namespace Cortana_Quick
 {
@@ -22,26 +17,31 @@ namespace Cortana_Quick
         public MainPage()
         {
             InitializeComponent();
+            BuildLocalizedApplicationBar();
         }
 
         SpeechSynthesizer talk;
 
+        private void BuildLocalizedApplicationBar()
+        {
+            // Set the page's ApplicationBar to a new instance of ApplicationBar.
+            ApplicationBar = new ApplicationBar();
 
-        // Sample code for building a localized ApplicationBar
-        //private void BuildLocalizedApplicationBar()
-        //{
-        //    // Set the page's ApplicationBar to a new instance of ApplicationBar.
-        //    ApplicationBar = new ApplicationBar();
+            //// Create a new button and set the text value to the localized string from AppResources.
+            //ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
+            //appBarButton.Text = AppResources.AppBarButtonText;
+            //ApplicationBar.Buttons.Add(appBarButton);
 
-        //    // Create a new button and set the text value to the localized string from AppResources.
-        //    ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
-        //    appBarButton.Text = AppResources.AppBarButtonText;
-        //    ApplicationBar.Buttons.Add(appBarButton);
+            // Create a new menu item with the localized string from AppResources.
+            ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem("settings");
+            appBarMenuItem.Click += appBarMenuItem_Click;
+            ApplicationBar.MenuItems.Add(appBarMenuItem);
+        }
 
-        //    // Create a new menu item with the localized string from AppResources.
-        //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
-        //    ApplicationBar.MenuItems.Add(appBarMenuItem);
-        //}
+        void appBarMenuItem_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/SettingsPage.xaml", UriKind.Relative));
+        }
 
         /// <summary>
         /// We need to check if the app called by Cortana and then handle the voice commands, else whe install the voice commands
@@ -64,8 +64,12 @@ namespace Cortana_Quick
             }
 
             base.OnNavigatedTo(e);
-
+            
+            bool delete = StorageHelper.GetSetting("AUTO_DELETE", true);
+            int days = StorageHelper.GetSetting("MAXIMUM_DATE", 1);
+            
             Notes notes = new Notes();
+            notes.DestroyOldNotes(days, delete);           
             NotesList.ItemsSource = notes.GetAllNotes();
         }
 
@@ -131,7 +135,7 @@ namespace Cortana_Quick
         }
         
         /// <summary>
-        /// If Cortana gave us a Null or empty string or ... there was a connection problem 
+        /// If Cortana gave us a Null or empty string or '...' there was a connection problem 
         /// </summary>
         /// <param name="text">The string Cortana gave us</param>
         /// <returns>false if a connection problem as found || true if everything is ok </returns>
@@ -167,9 +171,10 @@ namespace Cortana_Quick
 
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void DeleteNoteClick(object sender, RoutedEventArgs e)
         {
-
+            MenuItem mi = sender as MenuItem;
+            //Todo Delete single note
         }
     }
 }

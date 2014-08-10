@@ -34,11 +34,24 @@ namespace QuickDatabase
             DaoNotes daoNotes = new DaoNotes();
             return daoNotes.GetSimilarNotes(keyword);
         }
-        
+
         public bool Save()
         {
             DaoNotes daoNotes = new DaoNotes();
             return daoNotes.Save(this);
+        }
+
+        public bool DestroyOldNotes(int days, bool destroy)
+        {
+            if (destroy)
+            {
+                DaoNotes daoNotes = new DaoNotes();
+                return daoNotes.DestroyOldNotes(days);
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
