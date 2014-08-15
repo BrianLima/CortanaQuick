@@ -50,7 +50,6 @@ namespace QuickDatabase
 
         public bool DestroyOldNotes(int days)
         {
-            var ok;
             try
             {
                 using (DataBaseContext db = new DataBaseContext(DataBaseContext.ConnectionString))

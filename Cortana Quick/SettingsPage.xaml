@@ -11,9 +11,6 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
-    <phone:PhoneApplicationPage.Resources>
-        <toolkit:OffOnConverter x:Key="OffOnConverter"/>
-    </phone:PhoneApplicationPage.Resources>
     <phone:PhoneApplicationPage.FontFamily>
         <StaticResource ResourceKey="PhoneFontFamilyNormal"/>
     </phone:PhoneApplicationPage.FontFamily>
@@ -23,6 +20,19 @@
     <phone:PhoneApplicationPage.Foreground>
         <StaticResource ResourceKey="PhoneForegroundBrush"/>
     </phone:PhoneApplicationPage.Foreground>
+
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate x:Name="ListPickerItemTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Value}" Margin="0 0 0 0" FontSize="22"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Name="ListPickerFullModeItemTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Value}" Margin="0 0 0 0" FontSize="22"/>
+            </StackPanel>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
@@ -42,12 +52,9 @@
                 <ColumnDefinition Width="7*"/>
                 <ColumnDefinition Width="145*"/>
             </Grid.ColumnDefinitions>
-            <Slider x:Name="Slider" HorizontalAlignment="Left" Margin="10,137,0,0" VerticalAlignment="Top" Width="436" Grid.ColumnSpan="2" Minimum="1" Maximum="14" DataContext="{Binding LocalizedResources.MaximumDate, Mode=OneWay, Source={StaticResource LocalizedStrings}}" IsEnabled="False"/>
-            <CheckBox x:Name="CheckDelete" Content="Automatic delete older notes" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-            <TextBlock x:Name="TextDelete" HorizontalAlignment="Left" Margin="0,87,0,0" TextWrapping="Wrap" Text="Delete older notes after:" VerticalAlignment="Top" Grid.Column="1"/>
-            <TextBlock TextAlignment="Right" Grid.Column="1" Margin="338,87,59,0" TextWrapping="Wrap" Text="{Binding Value, ElementName=Slider}" VerticalAlignment="Top"/>
-            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="381,87,0,0" TextWrapping="Wrap" Text="days" VerticalAlignment="Top" Width="44"/>
-
+            <toolkit:ListPicker x:Name="listPicker" SelectionMode="Single" SelectionChanged="listPicker_SelectionChanged" ItemTemplate="{StaticResource ListPickerItemTemplate}" FullModeItemTemplate="{StaticResource ListPickerFullModeItemTemplate}" Header="days" FullModeHeader="Items" CacheMode="BitmapCache" Margin="10,119,268,395" Grid.Column="1" Background="Transparent" BorderBrush="Transparent"/>
+            <CheckBox x:Name="CheckDelete" Content="Automatic delete older notes" Margin="10,10,87,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Checked="CheckDelete_Checked" Unchecked="CheckDelete_Unchecked"/>
+            <TextBlock x:Name="TextDelete" HorizontalAlignment="Left" Margin="0,87,0,0" TextWrapping="Wrap" Text="Delete older notes after:" VerticalAlignment="Top" Grid.Column="1" FontSize="18"/>
         </Grid>
     </Grid>
 

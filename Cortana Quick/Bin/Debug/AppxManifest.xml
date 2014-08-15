@@ -11,7 +11,7 @@
   <mp:PhoneIdentity PhoneProductId="bd0dec9a-2742-4bc7-bbe2-4f7f0de109c1" PhonePublisherId="10aad829-6964-480d-8a51-1dd372f097c9" />
   <Properties>
     <DisplayName>Cortana Quick</DisplayName>
-    <PublisherDisplayName>Brian</PublisherDisplayName>
+    <PublisherDisplayName>Briano</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -23,7 +23,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="AGHost.exe" EntryPoint="MainPage.xaml">
-      <m3:VisualElements DisplayName="Cortana Quick" Square150x150Logo="Assets\SquareTile150x150.png" Square44x44Logo="Assets\Logo.png" Description="Cortana Quick" ForegroundText="light" BackgroundColor="#464646">
+      <m3:VisualElements DisplayName="Cortana Quick" Square150x150Logo="Assets\SquareTile150x150.png" Square44x44Logo="Assets\Logo.png" Description="Cortana Quick" ForegroundText="light" BackgroundColor="#464646" ToastCapable="false">
         <m3:DefaultTile Square71x71Logo="Assets\SquareTile71x71.png"></m3:DefaultTile>
         <m3:SplashScreen Image="Assets\SplashScreen.png" />
       </m3:VisualElements>

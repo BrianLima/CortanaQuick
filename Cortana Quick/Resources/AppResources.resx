@@ -135,7 +135,7 @@
     <value>Menu Item</value>
   </data>
   <data name="Auto_Delete" xml:space="preserve">
-    <value>true</value>
+    <value>false</value>
   </data>
   <data name="Maximum_Date" xml:space="preserve">
     <value>1</value>

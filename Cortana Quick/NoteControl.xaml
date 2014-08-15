@@ -10,7 +10,7 @@
     d:DesignHeight="110" d:DesignWidth="381.481"
     HorizontalAlignment="Left">
 
-    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}" HorizontalAlignment="Left" Width="381">
+    <Grid x:Name="LayoutRoot" Background="Transparent" HorizontalAlignment="Left" Width="381">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>

@@ -65,7 +65,7 @@ namespace Cortana_Quick
 
             base.OnNavigatedTo(e);
             
-            bool delete = StorageHelper.GetSetting("AUTO_DELETE", true);
+            bool delete = StorageHelper.GetSetting("AUTO_DELETE", false);
             int days = StorageHelper.GetSetting("MAXIMUM_DATE", 1);
             
             Notes notes = new Notes();
