@@ -65,5 +65,24 @@ namespace QuickDatabase
                 return false;
             }
         }
+
+        public bool Destroy(Notes note)
+        {
+            try
+            {
+                using (DataBaseContext db = new DataBaseContext(DataBaseContext.ConnectionString))
+                {
+                    var excluir = db.Notes.Where(t => t.id == note.id).First();
+                    db.Notes.DeleteOnSubmit(excluir);
+                    db.SubmitChanges();
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
     }
 }

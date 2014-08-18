@@ -36,6 +36,7 @@ namespace Cortana_Quick
             }
             
             this.listPicker.ItemsSource = source;
+            this.listPicker.SelectedIndex = days -= 1;
         }
 
         private void CheckDelete_Checked(object sender, RoutedEventArgs e)
@@ -48,11 +49,6 @@ namespace Cortana_Quick
         {
             this.listPicker.IsEnabled = false;
             StorageHelper.StoreSetting("AUTO_DELETE", false, true);
-        }
-
-        private void Slider_LostFocus(object sender, RoutedEventArgs e)
-        {
-            //StorageHelper.StoreSetting("MAXIMUM_DATE", Slider.Value, true);
         }
 
         private void listPicker_SelectionChanged(object sender, SelectionChangedEventArgs e)

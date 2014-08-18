@@ -49,8 +49,7 @@ namespace Cortana_Quick
         /// <param name="e"></param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            //ToDo Fix double navigation, somehow the app is calling OnNavigated two times after resuming
-            //if (e.NavigationMode == NavigationMode.New)
+            if (e.NavigationMode == NavigationMode.New)
             {
                 string voiceCommandName;
                 if (NavigationContext.QueryString.TryGetValue("voiceCommandName", out voiceCommandName))
@@ -123,7 +122,6 @@ namespace Cortana_Quick
         {
             var a = MessageBox.Show(text, "Heard you say:", MessageBoxButton.OKCancel);
 
-            //ToDo Write a verification method to make sure that Cortana and our user are friends
             if (a != MessageBoxResult.Cancel)
             {
                 Notes note = new Notes();
@@ -174,7 +172,12 @@ namespace Cortana_Quick
         private void DeleteNoteClick(object sender, RoutedEventArgs e)
         {
             MenuItem mi = sender as MenuItem;
-            //Todo Delete single note
+            if (mi != null)
+            {
+                Notes note = mi.DataContext as Notes;
+                if (!note.DestroyNote()) MessageBox.Show("Error while deleting your note");
+                NotesList.ItemsSource = note.GetAllNotes();
+            }
         }
     }
 }

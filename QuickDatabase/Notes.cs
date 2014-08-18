@@ -53,5 +53,11 @@ namespace QuickDatabase
                 return false;
             }
         }
+
+        public bool DestroyNote()
+        {
+            DaoNotes daoNotes = new DaoNotes();
+            return daoNotes.Destroy(this);
+        }
     }
 }
