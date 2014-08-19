@@ -7,6 +7,7 @@ namespace QuickDatabase
 {
     class DaoNotes
     {
+        //ToDo Normalize methods
         public IEnumerable<Notes> GetAllNotes()
         {
             List<Notes> data = new List<Notes>();
@@ -17,6 +18,18 @@ namespace QuickDatabase
                         select notes).ToList();
             }
             return data;
+        }
+
+        public List<Notes> GetAllNotesAsList()
+        {
+            List<Notes> data = new List<Notes>();
+            using (DataBaseContext db = new DataBaseContext(DataBaseContext.ConnectionString))
+            {
+                data = (from notes in db.Notes
+                        orderby notes.date descending
+                        select notes).ToList();
+            }
+            return data.ToList<Notes>();
         }
 
         public bool Save(Notes note)
@@ -84,5 +97,36 @@ namespace QuickDatabase
             }
         }
 
+
+        internal Notes GetNote(int id)
+        {
+            List<Notes> data = new List<Notes>();
+            using(DataBaseContext db = new DataBaseContext(DataBaseContext.ConnectionString))
+            {
+                data = (from e in db.Notes
+                        where e.id == id
+                        select e).ToList();
+            }
+            return data[0];
+        }
+
+        //ToDo Update note using Linq
+
+        internal bool UpdateNote(int id, string note)
+        {
+            try
+            {
+                using (DataBaseContext db = new DataBaseContext(DataBaseContext.ConnectionString))
+                {
+                    //(from e in db.Notes
+                    // where e.id == id)
+                    return true;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

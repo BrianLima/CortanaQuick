@@ -8,16 +8,23 @@ using System.Windows;
 using System.Windows.Navigation;
 using Windows.Phone.Speech.Synthesis;
 using Windows.Phone.Speech.VoiceCommands;
+using Windows.UI.Notifications;
+using Windows.Data.Xml.Dom;
 
 namespace Cortana_Quick
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        public static List<String> phrases = new List<String> {"are", "my","is", "on"
+		};
+
+
         // Constructor
         public MainPage()
         {
             InitializeComponent();
             BuildLocalizedApplicationBar();
+            //UpdateLiveTile();
         }
 
         SpeechSynthesizer talk;
@@ -34,11 +41,11 @@ namespace Cortana_Quick
 
             // Create a new menu item with the localized string from AppResources.
             ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem("settings");
-            appBarMenuItem.Click += appBarMenuItem_Click;
+            appBarMenuItem.Click += AppBarMenuItem_Click;
             ApplicationBar.MenuItems.Add(appBarMenuItem);
         }
 
-        void appBarMenuItem_Click(object sender, EventArgs e)
+        void AppBarMenuItem_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/SettingsPage.xaml", UriKind.Relative));
         }
@@ -98,10 +105,13 @@ namespace Cortana_Quick
             string[] words = question.Split(' ');
             List<String> results = new List<string>();
             Notes note = new Notes();
-            
+
             for (int i = 0; i < words.Length; i++)
             {
-                results.AddRange(note.GetSimilarNotes(words[i]));
+                if (!phrases.Contains(words[i]))
+                {
+                    results.AddRange(note.GetSimilarNotes(words[i]));
+                }
             }
 
             try
@@ -166,7 +176,12 @@ namespace Cortana_Quick
 
         private void NoteDetailClick(object sender, RoutedEventArgs e)
         {
-
+            var t = sender as NoteControl;
+            if (t != null)
+            {
+                Notes note = t.DataContext as Notes;
+                NavigationService.Navigate(new Uri("/NoteDetailPage.xaml?parameter=" + note.id, UriKind.Absolute));
+            }
         }
 
         private void DeleteNoteClick(object sender, RoutedEventArgs e)
@@ -178,6 +193,76 @@ namespace Cortana_Quick
                 if (!note.DestroyNote()) MessageBox.Show("Error while deleting your note");
                 NotesList.ItemsSource = note.GetAllNotes();
             }
+        }
+
+        private async void UpdateLiveTile()
+        {
+            var updater = TileUpdateManager.CreateTileUpdaterForApplication();
+            updater.EnableNotificationQueue(true);
+            updater.Clear();
+            Notes note = new Notes();
+            List<Notes> notes = note.GetAllNotesAsList();
+            int count = 0;
+            try
+            {
+                //var tileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150PeekImageAndText01);
+                //
+                //var tileImage = tileXml.GetElementsByTagName("image")[0] as XmlElement;
+                //tileImage.SetAttribute("src", "ms-appx:///Assets/FlipCycleTileMedium.png");
+                //
+                //var tileText = tileXml.GetElementsByTagName("text");
+                //(tileText[0] as XmlElement).InnerText = "Row 0";
+                //(tileText[1] as XmlElement).InnerText = "Row 1";
+                //(tileText[2] as XmlElement).InnerText = "Row 2";
+                //(tileText[3] as XmlElement).InnerText = "Row 3";
+                //
+                //var tileNotification = new TileNotification(tileXml);
+                //TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
+
+
+
+                TileUpdateManager.CreateTileUpdaterForApplication().Clear();
+                TileUpdateManager.CreateTileUpdaterForApplication().EnableNotificationQueue(true);
+
+                var tileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150Image);
+
+                var tileImage = tileXml.GetElementsByTagName("image")[0] as XmlElement;
+                tileImage.SetAttribute("src", "ms-appx:///Assets/image1.jpg");
+                var tileNotification = new TileNotification(tileXml);
+                TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
+
+                tileImage.SetAttribute("src", "ms-appx:///Assets/image2.jpg");
+                tileNotification = new TileNotification(tileXml);
+                tileNotification.Tag = "myTag";
+                TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
+
+
+
+
+
+
+                //notes.ForEach(update);
+            }
+            catch (Exception ಠ_ಠ)
+            {
+
+
+            }
+        }
+
+        private static void update(Notes note)
+        {
+            var updater = TileUpdateManager.CreateTileUpdaterForApplication();
+            updater.EnableNotificationQueue(true);
+            updater.Clear();
+
+            XmlDocument tileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150PeekImageAndText04);
+            var image = tileXml.GetElementsByTagName("image")[0] as XmlElement;
+            image.SetAttribute("src", "ms-appx:///Assets/FlipCycleTileMedium.png");
+            var tileText = tileXml.GetElementsByTagName("text");
+            (tileText[0] as XmlElement).InnerText = note.note;
+            //(tileText[1] as XmlElement).InnerText = note.date.ToString();
+            updater.Update(new TileNotification(tileXml));
         }
     }
 }

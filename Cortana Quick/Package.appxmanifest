@@ -25,6 +25,7 @@
         <Extension Category="windows.backgroundTasks" EntryPoint="AgHost.BackgroundTask">
           <BackgroundTasks>
             <Task Type="systemEvent" />
+            <Task Type="timer" />
           </BackgroundTasks>
         </Extension>
       </Extensions>

@@ -90,3 +90,4 @@ C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\
 C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
 C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\NoteControl.g.cs
 C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\SettingsPage.g.cs
+C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Debug\NoteDetailPage.g.cs

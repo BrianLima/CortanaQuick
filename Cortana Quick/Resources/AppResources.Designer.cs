@@ -122,5 +122,9 @@ namespace Cortana_Quick.Resources {
                 return ResourceManager.GetString("ResourceLanguage", resourceCulture);
             }
         }
+
+        public static string AppBarButtonTextDelete { get; set; }
+
+        public static string AppBarButtonTextSave { get; set; }
     }
 }

@@ -29,6 +29,12 @@ namespace QuickDatabase
             return daoNotes.GetAllNotes();
         }
 
+        public List<Notes> GetAllNotesAsList()
+        {
+            DaoNotes daoNotes = new DaoNotes();
+            return daoNotes.GetAllNotesAsList();
+        }
+
         public IEnumerable<string> GetSimilarNotes(string keyword)
         {
             DaoNotes daoNotes = new DaoNotes();
@@ -58,6 +64,19 @@ namespace QuickDatabase
         {
             DaoNotes daoNotes = new DaoNotes();
             return daoNotes.Destroy(this);
+        }
+
+        public Notes GetNote(int id)
+        {
+            DaoNotes daoNotes = new DaoNotes();
+            return daoNotes.GetNote(id);
+        }
+
+        public bool UpdateNote(int id, string note)
+        {
+            DaoNotes daoNotes = new DaoNotes();
+            return daoNotes.UpdateNote(id, note);
+
         }
     }
 }
