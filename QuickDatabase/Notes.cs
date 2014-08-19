@@ -76,7 +76,6 @@ namespace QuickDatabase
         {
             DaoNotes daoNotes = new DaoNotes();
             return daoNotes.UpdateNote(id, note);
-
         }
     }
 }
