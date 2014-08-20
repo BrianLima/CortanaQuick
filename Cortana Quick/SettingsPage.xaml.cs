@@ -14,28 +14,22 @@ namespace Cortana_Quick
     {
         List<numbers> source = new List<numbers>();
         
-        bool delete;
-        int days;
         public SettingsPage()
         {
             InitializeComponent();
-            delete = StorageHelper.GetSetting("AUTO_DELETE", false);
-            days = StorageHelper.GetSetting("MAXIMUM_DATE", 1);
+            
+            
             for (int i = 0; i < 31; i++)
             {
                 source.Add(new numbers() { Value = i + 1 });
             }
 
-            if (delete)
-            {
-                CheckDelete.IsChecked = true;
-            }
-            else
-            {
-                CheckDelete.IsChecked = false;
-            }
-            
+            CheckDelete.IsChecked = StorageHelper.GetSetting("AUTO_DELETE", false);
+            CheckVerify.IsChecked = StorageHelper.GetSetting("VERIFY", true);
             this.listPicker.ItemsSource = source;
+            
+            int days = StorageHelper.GetSetting("MAXIMUM_DATE", 1);
+            
             this.listPicker.SelectedIndex = days -= 1;
         }
 
@@ -55,8 +49,20 @@ namespace Cortana_Quick
         {
             StorageHelper.StoreSetting("MAXIMUM_DATE", this.listPicker.SelectedIndex + 1, true);
         }
+
+        private void CheckVerify_Checked(object sender, RoutedEventArgs e)
+        {
+            StorageHelper.StoreSetting("VERIFY", true, true);
+        }
+
+        private void CheckVerify_Unchecked(object sender, RoutedEventArgs e)
+        {
+            //Bug It seems that this setting isn't being correctly stored for some unknown reason
+            StorageHelper.StoreSetting("VERIFY", false, true);
+        }
     }
-    public class numbers
+
+    class numbers
     {
         public int Value { get; set; }
     }

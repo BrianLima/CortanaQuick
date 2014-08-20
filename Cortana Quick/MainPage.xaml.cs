@@ -176,11 +176,12 @@ namespace Cortana_Quick
 
         private void NoteDetailClick(object sender, RoutedEventArgs e)
         {
-            var t = sender as NoteControl;
+            var t = sender as MenuItem;
             if (t != null)
             {
                 Notes note = t.DataContext as Notes;
-                NavigationService.Navigate(new Uri("/NoteDetailPage.xaml?parameter=" + note.id, UriKind.Absolute));
+                string id = note.id.ToString();
+                NavigationService.Navigate(new Uri("/NoteDetailPage.xaml?parameter=" + id, UriKind.RelativeOrAbsolute));
             }
         }
 

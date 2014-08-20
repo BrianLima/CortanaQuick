@@ -61,25 +61,25 @@ namespace Cortana_Quick.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to add.
+        ///   Looks up a localized string similar to Cancel.
         /// </summary>
-        public static string AppBarButtonText {
+        public static string AppBarButtonTextDelete {
             get {
-                return ResourceManager.GetString("AppBarButtonText", resourceCulture);
+                return ResourceManager.GetString("AppBarButtonTextDelete", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Menu Item.
+        ///   Looks up a localized string similar to Save.
         /// </summary>
-        public static string AppBarMenuItemText {
+        public static string AppBarButtonTextSave {
             get {
-                return ResourceManager.GetString("AppBarMenuItemText", resourceCulture);
+                return ResourceManager.GetString("AppBarButtonTextSave", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MY APPLICATION.
+        ///   Looks up a localized string similar to Cortana Quick.
         /// </summary>
         public static string ApplicationTitle {
             get {
@@ -122,9 +122,14 @@ namespace Cortana_Quick.Resources {
                 return ResourceManager.GetString("ResourceLanguage", resourceCulture);
             }
         }
-
-        public static string AppBarButtonTextDelete { get; set; }
-
-        public static string AppBarButtonTextSave { get; set; }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to true.
+        /// </summary>
+        public static string Verify {
+            get {
+                return ResourceManager.GetString("Verify", resourceCulture);
+            }
+        }
     }
 }

@@ -23,6 +23,8 @@ namespace Cortana_Quick
 
         private void BuildLocalizedApplicationBar()
         {
+            ApplicationBar = new ApplicationBar();
+
             //Todo Update button's icons
             ApplicationBarIconButton appBarButtonSave = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
             appBarButtonSave.Text = AppResources.AppBarButtonTextSave;
@@ -37,20 +39,28 @@ namespace Cortana_Quick
 
         private void AppBarButtonDelete_Click(object sender, EventArgs e)
         {
-            //ToDo Programmatically close page
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
         }
 
         private void AppBarButtonSave_Click(object sender, EventArgs e)
         {
             note.UpdateNote(note.id, BoxNoteDetail.Text);
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
         }
 
         //ToDo implement note detail page
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            note = new Notes();
             base.OnNavigatedTo(e);
-            int value = Int32.Parse(NavigationContext.QueryString["parameter"]);
-            note = note.GetNote(value);
+            int id = Int32.Parse(NavigationContext.QueryString["parameter"]);
+            note = note.GetNote(id);
             BoxNoteDetail.Text = note.note;
             BlockNoteDate.Text = note.date.ToString();
         }

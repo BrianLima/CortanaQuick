@@ -126,18 +126,24 @@
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
   <data name="ApplicationTitle" xml:space="preserve">
-    <value>MY APPLICATION</value>
-  </data>
-  <data name="AppBarButtonText" xml:space="preserve">
-    <value>add</value>
-  </data>
-  <data name="AppBarMenuItemText" xml:space="preserve">
-    <value>Menu Item</value>
+    <value>Cortana Quick</value>
   </data>
   <data name="Auto_Delete" xml:space="preserve">
     <value>false</value>
+    <comment>Controls if the app is going to automatic delete older notes</comment>
   </data>
   <data name="Maximum_Date" xml:space="preserve">
     <value>1</value>
+    <comment>Controls the amount of days for the app delete older ntoes</comment>
+  </data>
+  <data name="Verify" xml:space="preserve">
+    <value>true</value>
+    <comment>Controls if the app will verify the user input via Cortana</comment>
+  </data>
+  <data name="AppBarButtonTextDelete" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="AppBarButtonTextSave" xml:space="preserve">
+    <value>Save</value>
   </data>
 </root>

@@ -118,10 +118,15 @@ namespace QuickDatabase
             {
                 using (DataBaseContext db = new DataBaseContext(DataBaseContext.ConnectionString))
                 {
-                    //(from e in db.Notes
-                    // where e.id == id)
-                    return true;
+                    Notes update = (from tar in db.Notes
+                                     where tar.id == id
+                                     select tar).First();
+
+                    update.note = note;
+                    db.SubmitChanges();
+                    
                 }
+                return true;
             }
             catch (Exception)
             {
