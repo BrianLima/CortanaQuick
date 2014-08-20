@@ -26,12 +26,12 @@ namespace Cortana_Quick
             ApplicationBar = new ApplicationBar();
 
             //Todo Update button's icons
-            ApplicationBarIconButton appBarButtonSave = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
+            ApplicationBarIconButton appBarButtonSave = new ApplicationBarIconButton(new Uri("/Assets/check.png", UriKind.Relative));
             appBarButtonSave.Text = AppResources.AppBarButtonTextSave;
             ApplicationBar.Buttons.Add(appBarButtonSave);
             appBarButtonSave.Click +=AppBarButtonSave_Click;
 
-            ApplicationBarIconButton appBarButtonDelete = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
+            ApplicationBarIconButton appBarButtonDelete = new ApplicationBarIconButton(new Uri("/Assets/close.png", UriKind.Relative));
             appBarButtonDelete.Text = AppResources.AppBarButtonTextDelete;
             ApplicationBar.Buttons.Add(appBarButtonDelete);
             appBarButtonDelete.Click += AppBarButtonDelete_Click;

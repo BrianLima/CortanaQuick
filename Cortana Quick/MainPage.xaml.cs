@@ -10,6 +10,7 @@ using Windows.Phone.Speech.Synthesis;
 using Windows.Phone.Speech.VoiceCommands;
 using Windows.UI.Notifications;
 using Windows.Data.Xml.Dom;
+using System.Linq;
 
 namespace Cortana_Quick
 {
@@ -139,6 +140,7 @@ namespace Cortana_Quick
                 note.note = text;
                 note.Save();
                 note = null;
+                UpdateLiveTile(text);
             }
         }
         
@@ -196,74 +198,18 @@ namespace Cortana_Quick
             }
         }
 
-        private async void UpdateLiveTile()
+        private async void UpdateLiveTile(string note)
         {
-            var updater = TileUpdateManager.CreateTileUpdaterForApplication();
-            updater.EnableNotificationQueue(true);
-            updater.Clear();
-            Notes note = new Notes();
-            List<Notes> notes = note.GetAllNotesAsList();
-            int count = 0;
-            try
+            ShellTile tile = ShellTile.ActiveTiles.FirstOrDefault();
+            StandardTileData standardData = new StandardTileData
             {
-                //var tileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150PeekImageAndText01);
-                //
-                //var tileImage = tileXml.GetElementsByTagName("image")[0] as XmlElement;
-                //tileImage.SetAttribute("src", "ms-appx:///Assets/FlipCycleTileMedium.png");
-                //
-                //var tileText = tileXml.GetElementsByTagName("text");
-                //(tileText[0] as XmlElement).InnerText = "Row 0";
-                //(tileText[1] as XmlElement).InnerText = "Row 1";
-                //(tileText[2] as XmlElement).InnerText = "Row 2";
-                //(tileText[3] as XmlElement).InnerText = "Row 3";
-                //
-                //var tileNotification = new TileNotification(tileXml);
-                //TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
+                BackContent = note,
+                BackTitle = "Cortana Quick",
+                BackgroundImage = new Uri("/Assets/ApplicationIcon.png", UriKind.Relative),
+                Title = "Cortana Quick"
+            };
+            tile.Update(standardData);
 
-
-
-                TileUpdateManager.CreateTileUpdaterForApplication().Clear();
-                TileUpdateManager.CreateTileUpdaterForApplication().EnableNotificationQueue(true);
-
-                var tileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150Image);
-
-                var tileImage = tileXml.GetElementsByTagName("image")[0] as XmlElement;
-                tileImage.SetAttribute("src", "ms-appx:///Assets/image1.jpg");
-                var tileNotification = new TileNotification(tileXml);
-                TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
-
-                tileImage.SetAttribute("src", "ms-appx:///Assets/image2.jpg");
-                tileNotification = new TileNotification(tileXml);
-                tileNotification.Tag = "myTag";
-                TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
-
-
-
-
-
-
-                //notes.ForEach(update);
-            }
-            catch (Exception ಠ_ಠ)
-            {
-
-
-            }
-        }
-
-        private static void update(Notes note)
-        {
-            var updater = TileUpdateManager.CreateTileUpdaterForApplication();
-            updater.EnableNotificationQueue(true);
-            updater.Clear();
-
-            XmlDocument tileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150PeekImageAndText04);
-            var image = tileXml.GetElementsByTagName("image")[0] as XmlElement;
-            image.SetAttribute("src", "ms-appx:///Assets/FlipCycleTileMedium.png");
-            var tileText = tileXml.GetElementsByTagName("text");
-            (tileText[0] as XmlElement).InnerText = note.note;
-            //(tileText[1] as XmlElement).InnerText = note.date.ToString();
-            updater.Update(new TileNotification(tileXml));
         }
     }
 }
