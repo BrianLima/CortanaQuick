@@ -231,6 +231,9 @@
     <AppxPackagedFile Include="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\Tiles\IconicTileSmall.png">
       <PackagePath>Assets\Tiles\IconicTileSmall.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\SplashScreen.png">
+      <PackagePath>SplashScreen.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\VoiceDefinition.xml">
       <PackagePath>VoiceDefinition.xml</PackagePath>
     </AppxPackagedFile>

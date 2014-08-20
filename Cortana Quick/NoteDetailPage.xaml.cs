@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Navigation;
+﻿using Cortana_Quick.Resources;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using QuickDatabase;
-using Cortana_Quick.Resources;
+using System;
+using System.Windows.Navigation;
 
 namespace Cortana_Quick
 {

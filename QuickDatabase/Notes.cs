@@ -35,7 +35,7 @@ namespace QuickDatabase
             return daoNotes.GetAllNotesAsList();
         }
 
-        public IEnumerable<string> GetSimilarNotes(string keyword)
+        public IEnumerable<Notes> GetSimilarNotes(string keyword)
         {
             DaoNotes daoNotes = new DaoNotes();
             return daoNotes.GetSimilarNotes(keyword);

@@ -3,29 +3,23 @@ using Microsoft.Phone.Shell;
 using QuickDatabase;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Navigation;
 using Windows.Phone.Speech.Synthesis;
 using Windows.Phone.Speech.VoiceCommands;
-using Windows.UI.Notifications;
-using Windows.Data.Xml.Dom;
-using System.Linq;
 
 namespace Cortana_Quick
 {
     public partial class MainPage : PhoneApplicationPage
     {
-        public static List<String> phrases = new List<String> {"are", "my","is", "on"
-		};
+        public static List<String> phrases = new List<String> {"are", "my","is", "on", "where"};
 
-
-        // Constructor
         public MainPage()
         {
             InitializeComponent();
             BuildLocalizedApplicationBar();
-            //UpdateLiveTile();
         }
 
         SpeechSynthesizer talk;
@@ -104,7 +98,7 @@ namespace Cortana_Quick
         private async void HandleAskCommands(string question)
         {
             string[] words = question.Split(' ');
-            List<String> results = new List<string>();
+            List<Notes> results = new List<Notes>();
             Notes note = new Notes();
 
             for (int i = 0; i < words.Length; i++)
@@ -115,13 +109,20 @@ namespace Cortana_Quick
                 }
             }
 
-            try
+            if (results.Count > 0)
             {
-                await talk.SpeakTextAsync(results[0]);
-            }
-            catch (Exception exception)
-            {
-                throw new Exception("Error when trying to use TTS", exception);
+                //Here is where is the magic, selecting the most frequent note found using the users given keywords
+                Notes mostFrequent = results.GroupBy(id => id).OrderByDescending(g => g.Count()).Take(1).Select(g => g.Key).First();
+
+                try
+                {
+                    talk = new SpeechSynthesizer();
+                    await talk.SpeakTextAsync(mostFrequent.note);
+                }
+                catch (Exception exception)
+                {
+                    throw new Exception("Error when trying to use TTS", exception);
+                }
             }
         }
 

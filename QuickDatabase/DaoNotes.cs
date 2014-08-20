@@ -49,15 +49,15 @@ namespace QuickDatabase
             }
         }
 
-        internal IEnumerable<string> GetSimilarNotes(string keyword)
+        internal IEnumerable<Notes> GetSimilarNotes(string keyword)
         {
             using (DataBaseContext db = new DataBaseContext(DataBaseContext.ConnectionString))
             {
                 var data = from note in db.Notes
                            where note.note.Contains(keyword)
-                           select note.note;
+                           select note;
 
-                return new ObservableCollection<string>(data);
+                return new ObservableCollection<Notes>(data);
             }
         }
 
