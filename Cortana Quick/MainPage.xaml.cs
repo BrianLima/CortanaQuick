@@ -14,7 +14,7 @@ namespace Cortana_Quick
 {
     public partial class MainPage : PhoneApplicationPage
     {
-        public static List<String> phrases = new List<String> {"are", "my","is", "on", "where"};
+        public static List<String> phrases = new List<String> {"are", "my","is", "on", "where", "i", "left", "does", "did"};
 
         public MainPage()
         {
@@ -50,7 +50,9 @@ namespace Cortana_Quick
         /// </summary>
         /// <param name="e"></param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
+        {    
+            base.OnNavigatedTo(e);
+
             if (e.NavigationMode == NavigationMode.New)
             {
                 string voiceCommandName;
@@ -63,8 +65,6 @@ namespace Cortana_Quick
                     Task.Run(() => InstallVoiceCommands());
                 }
             }
-
-            base.OnNavigatedTo(e);
             
             bool delete = StorageHelper.GetSetting("AUTO_DELETE", false);
             int days = StorageHelper.GetSetting("MAXIMUM_DATE", 1);
