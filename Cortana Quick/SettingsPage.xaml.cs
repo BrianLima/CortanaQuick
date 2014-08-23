@@ -16,6 +16,21 @@ namespace Cortana_Quick
         {
             InitializeComponent();
             BuildLocalizedApplicationBar();
+
+            bool delete = StorageHelper.GetSetting("AUTO_DELETE", false);
+            int days = StorageHelper.GetSetting("MAXIMUM_DATE", 1);
+            bool verify = StorageHelper.GetSetting("VERIFY_INPUT", true);
+
+            CheckDelete.IsChecked = delete;
+            CheckVerify.IsChecked = verify;
+
+            for (int i = 0; i < 31; i++)
+            {
+                source.Add(new numbers() { Value = i + 1 });
+            }
+
+            this.listPicker.ItemsSource = source;
+            this.listPicker.SelectedIndex = days -= 1;
         }
 
         private void BuildLocalizedApplicationBar()
@@ -58,26 +73,6 @@ namespace Cortana_Quick
         { 
             //StorageHelper.StoreSetting("MAXIMUM_DATE", this.listPicker.SelectedIndex + 1, true); 
         } 
-
-        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
-            
-            bool delete = StorageHelper.GetSetting("AUTO_DELETE", false);
-            int days = StorageHelper.GetSetting("MAXIMUM_DATE", 1);
-            bool verify = StorageHelper.GetSetting("VERIFY_INPUT", true);
-
-            CheckDelete.IsChecked = delete;
-            CheckVerify.IsChecked = verify;
-            
-            for (int i = 0; i < 31; i++)
-            {
-                source.Add(new numbers() { Value = i + 1 });
-            }
-
-            this.listPicker.ItemsSource = source;
-            this.listPicker.SelectedIndex = days -= 1;
-        }
     }
 
     class numbers
