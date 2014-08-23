@@ -1,4 +1,7 @@
-﻿using Microsoft.Phone.Controls;
+﻿using Cortana_Quick.Resources;
+using Microsoft.Phone.Controls;
+using Microsoft.Phone.Shell;
+using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,48 +15,68 @@ namespace Cortana_Quick
         public SettingsPage()
         {
             InitializeComponent();
+            BuildLocalizedApplicationBar();
+        }
+
+        private void BuildLocalizedApplicationBar()
+        {
+            ApplicationBar = new ApplicationBar();
+
+            //Todo Update button's icons
+            ApplicationBarIconButton appBarButtonSave = new ApplicationBarIconButton(new Uri("/Assets/check.png", UriKind.Relative));
+            appBarButtonSave.Text = AppResources.AppBarButtonTextSave;
+            ApplicationBar.Buttons.Add(appBarButtonSave);
+            appBarButtonSave.Click += AppBarButtonSave_Click;
+
+            ApplicationBarIconButton appBarButtonDelete = new ApplicationBarIconButton(new Uri("/Assets/close.png", UriKind.Relative));
+            appBarButtonDelete.Text = AppResources.AppBarButtonTextDelete;
+            ApplicationBar.Buttons.Add(appBarButtonDelete);
+            appBarButtonDelete.Click += AppBarButtonDelete_Click;
+        }
+
+        private void AppBarButtonDelete_Click(object sender, EventArgs e)
+        {
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+        }
+
+        private void AppBarButtonSave_Click(object sender, EventArgs e)
+        {
+            StorageHelper.StoreSetting("VERIFY_INPUT", this.CheckVerify.IsChecked, true);
+            StorageHelper.StoreSetting("MAXIMUM_DATE", this.listPicker.SelectedIndex + 1, true);
+            StorageHelper.StoreSetting("AUTO_DELETE", this.CheckDelete.IsChecked, true);
+
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+        }
+
+        private void listPicker_SelectionChanged(object sender, SelectionChangedEventArgs e) 
+        { 
+            //StorageHelper.StoreSetting("MAXIMUM_DATE", this.listPicker.SelectedIndex + 1, true); 
+        } 
+
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
             
+            bool delete = StorageHelper.GetSetting("AUTO_DELETE", false);
+            int days = StorageHelper.GetSetting("MAXIMUM_DATE", 1);
+            bool verify = StorageHelper.GetSetting("VERIFY_INPUT", true);
+
+            CheckDelete.IsChecked = delete;
+            CheckVerify.IsChecked = verify;
             
             for (int i = 0; i < 31; i++)
             {
                 source.Add(new numbers() { Value = i + 1 });
             }
 
-            CheckDelete.IsChecked = StorageHelper.GetSetting("AUTO_DELETE", false);
-            CheckVerify.IsChecked = StorageHelper.GetSetting("VERIFY", true);
             this.listPicker.ItemsSource = source;
-            
-            int days = StorageHelper.GetSetting("MAXIMUM_DATE", 1);
-            
             this.listPicker.SelectedIndex = days -= 1;
-        }
-
-        private void CheckDelete_Checked(object sender, RoutedEventArgs e)
-        {
-            this.listPicker.IsEnabled = true;
-            StorageHelper.StoreSetting("AUTO_DELETE", true, true);
-        }
-
-        private void CheckDelete_Unchecked(object sender, RoutedEventArgs e)
-        {
-            this.listPicker.IsEnabled = false;
-            StorageHelper.StoreSetting("AUTO_DELETE", false, true);
-        }
-
-        private void listPicker_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            StorageHelper.StoreSetting("MAXIMUM_DATE", this.listPicker.SelectedIndex + 1, true);
-        }
-
-        private void CheckVerify_Checked(object sender, RoutedEventArgs e)
-        {
-            StorageHelper.StoreSetting("VERIFY", true, true);
-        }
-
-        private void CheckVerify_Unchecked(object sender, RoutedEventArgs e)
-        {
-            //Bug It seems that this setting isn't being correctly stored for some unknown reason
-            StorageHelper.StoreSetting("VERIFY", false, true);
         }
     }
 

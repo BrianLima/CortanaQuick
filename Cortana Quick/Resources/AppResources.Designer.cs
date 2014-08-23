@@ -126,9 +126,9 @@ namespace Cortana_Quick.Resources {
         /// <summary>
         ///   Looks up a localized string similar to true.
         /// </summary>
-        public static string Verify {
+        public static string Verify_Input {
             get {
-                return ResourceManager.GetString("Verify", resourceCulture);
+                return ResourceManager.GetString("Verify_Input", resourceCulture);
             }
         }
     }

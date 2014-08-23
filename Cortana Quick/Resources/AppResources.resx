@@ -136,9 +136,8 @@
     <value>1</value>
     <comment>Controls the amount of days for the app delete older ntoes</comment>
   </data>
-  <data name="Verify" xml:space="preserve">
+  <data name="Verify_Input" xml:space="preserve">
     <value>true</value>
-    <comment>Controls if the app will verify the user input via Cortana</comment>
   </data>
   <data name="AppBarButtonTextDelete" xml:space="preserve">
     <value>Cancel</value>

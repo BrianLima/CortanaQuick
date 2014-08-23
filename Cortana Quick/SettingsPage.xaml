@@ -24,12 +24,12 @@
     <phone:PhoneApplicationPage.Resources>
         <DataTemplate x:Name="ListPickerItemTemplate">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="{Binding Value}" Margin="0 0 0 0" FontSize="22"/>
+                <TextBlock Text="{Binding Value}" Margin="0 0 0 0" FontSize="20"/>
             </StackPanel>
         </DataTemplate>
         <DataTemplate x:Name="ListPickerFullModeItemTemplate">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="{Binding Value}" Margin="0 0 0 0" FontSize="22"/>
+                <TextBlock Text="{Binding Value}" Margin="0 0 0 0" FontSize="36"/>
             </StackPanel>
         </DataTemplate>
     </phone:PhoneApplicationPage.Resources>
@@ -52,10 +52,10 @@
                 <ColumnDefinition Width="7*"/>
                 <ColumnDefinition Width="145*"/>
             </Grid.ColumnDefinitions>
-            <toolkit:ListPicker x:Name="listPicker" SelectionMode="Single" SelectionChanged="listPicker_SelectionChanged" ItemTemplate="{StaticResource ListPickerItemTemplate}" FullModeItemTemplate="{StaticResource ListPickerFullModeItemTemplate}" Header="days" FullModeHeader="days" CacheMode="BitmapCache" Margin="10,197,243,275" Grid.Column="1" Background="Transparent" BorderBrush="Transparent"/>
-            <CheckBox x:Name="CheckDelete" Content="Automatic delete older notes" Margin="10,88,87,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Checked="CheckDelete_Checked" Unchecked="CheckDelete_Unchecked"/>
+            <toolkit:ListPicker x:Name="listPicker" SelectionMode="Single" SelectionChanged="listPicker_SelectionChanged" ItemTemplate="{StaticResource ListPickerItemTemplate}" FullModeItemTemplate="{StaticResource ListPickerFullModeItemTemplate}" Header="days" FullModeHeader="days" CacheMode="BitmapCache" Margin="10,209,10,10" Grid.Column="1" Background="Transparent" BorderBrush="Transparent"/>
+            <CheckBox x:Name="CheckDelete" Content="Automatic delete older notes" Margin="10,88,87,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
             <TextBlock x:Name="TextDelete" HorizontalAlignment="Left" Margin="0,165,0,0" TextWrapping="Wrap" Text="Delete older notes after:" VerticalAlignment="Top" Grid.Column="1" FontSize="18"/>
-            <CheckBox x:Name="CheckVerify" Content="Verify user voice input" Margin="10,16,87,0" VerticalAlignment="Top" Checked="CheckVerify_Checked" Unchecked="CheckVerify_Unchecked" Grid.ColumnSpan="2" IsChecked="True"/>
+            <CheckBox x:Name="CheckVerify" Content="Verify user voice input" Margin="10,16,87,0" VerticalAlignment="Top" Grid.ColumnSpan="2" IsChecked="True"/>
         </Grid>
     </Grid>
 

@@ -13,7 +13,8 @@ using Windows.Phone.Speech.VoiceCommands;
 namespace Cortana_Quick
 {
     public partial class MainPage : PhoneApplicationPage
-    {
+    {  
+        SpeechSynthesizer talk;
         public static List<String> phrases = new List<String> {"are", "my","is", "on", "where", "i", "left", "does", "did"};
 
         public MainPage()
@@ -21,8 +22,6 @@ namespace Cortana_Quick
             InitializeComponent();
             BuildLocalizedApplicationBar();
         }
-
-        SpeechSynthesizer talk;
 
         private void BuildLocalizedApplicationBar()
         {
@@ -132,7 +131,13 @@ namespace Cortana_Quick
         /// <param name="note"></param>
         private async void HandleNoteCommands(string text)
         {
-            var a = MessageBox.Show(text, "Heard you say:", MessageBoxButton.OKCancel);
+            bool verify = StorageHelper.GetSetting("VERIFY_INPUT", true);
+            var a = MessageBoxResult.Yes;
+            
+            if (verify)
+            {
+                a = MessageBox.Show(text, "Heard you say:", MessageBoxButton.OKCancel);
+            }
 
             if (a != MessageBoxResult.Cancel)
             {
@@ -209,8 +214,7 @@ namespace Cortana_Quick
                 BackgroundImage = new Uri("/Assets/ApplicationIcon.png", UriKind.Relative),
                 Title = "Cortana Quick"
             };
-            tile.Update(standardData);
-
+           tile.Update(standardData);
         }
     }
 }
