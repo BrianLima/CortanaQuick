@@ -33,7 +33,6 @@
         </toolkit:NavigationOutTransition>
     </toolkit:TransitionService.NavigationOutTransition>
 
-    <!--Defining the listpicker layout-->
     <phone:PhoneApplicationPage.FontFamily>
         <StaticResource ResourceKey="PhoneFontFamilyNormal"/>
     </phone:PhoneApplicationPage.FontFamily>
@@ -43,7 +42,8 @@
     <phone:PhoneApplicationPage.Foreground>
         <StaticResource ResourceKey="PhoneForegroundBrush"/>
     </phone:PhoneApplicationPage.Foreground>
-
+    
+    <!--Defining the listpicker layout-->
     <phone:PhoneApplicationPage.Resources>
         <DataTemplate x:Name="ListPickerItemTemplate">
             <StackPanel Orientation="Horizontal">
@@ -56,6 +56,7 @@
             </StackPanel>
         </DataTemplate>
     </phone:PhoneApplicationPage.Resources>
+    
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
