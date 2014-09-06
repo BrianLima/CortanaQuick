@@ -83,7 +83,6 @@ namespace Cortana_Quick
             {
                 if (HandleConnectionProblems(result))
                 {
-                    //ToDo handle ask commands
                     HandleAskCommands(result);
                 }
             }
@@ -107,16 +106,21 @@ namespace Cortana_Quick
             {
                 //Here is where is the magic, selecting the most frequent note found using the users given keywords
                 Notes mostFrequent = results.GroupBy(id => id).OrderByDescending(g => g.Count()).Take(1).Select(g => g.Key).First();
-
+                mostFrequent.note.Replace("my", "your");
                 try
                 {
                     talk = new SpeechSynthesizer();
                     await talk.SpeakTextAsync(mostFrequent.note);
+                    MessageBox.Show(mostFrequent.note, "Here is what found", MessageBoxButton.OK);
                 }
                 catch (Exception exception)
                 {
-                    throw new Exception("Error when trying to use TTS", exception);
+                    MessageBox.Show("Error when trying to use Text to speech","Error", MessageBoxButton.OK);
                 }
+            }
+            else
+            {
+                MessageBox.Show("I couldn't find any matching note, try again","Oops",MessageBoxButton.OK);
             }
         }
 

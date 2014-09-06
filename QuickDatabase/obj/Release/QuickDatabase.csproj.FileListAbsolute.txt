@@ -1,0 +1,4 @@
+C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\QuickDatabase\Bin\Release\QuickDatabase.dll
+C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\QuickDatabase\Bin\Release\QuickDatabase.pdb
+C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\QuickDatabase\obj\Release\QuickDatabase.dll
+C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\QuickDatabase\obj\Release\QuickDatabase.pdb

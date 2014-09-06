@@ -2,17 +2,17 @@
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <CurrentDeployCmdId>256</CurrentDeployCmdId>
-    <CurrentDeployID>D363CCA4-0764-4F2C-9EE1-12E55E13C0FC</CurrentDeployID>
+    <CurrentDeployID>20DCA81D-A315-40BC-9B83-B6A01D31DBC6</CurrentDeployID>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <CurrentDeployCmdId>256</CurrentDeployCmdId>
-    <CurrentDeployID>D363CCA4-0764-4F2C-9EE1-12E55E13C0FC</CurrentDeployID>
+    <CurrentDeployID>20DCA81D-A315-40BC-9B83-B6A01D31DBC6</CurrentDeployID>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{C089C8C0-30E0-4E22-80C0-CE093F111A43}">
         <SilverlightMobileCSProjectFlavor>
-          <FullDeploy>True</FullDeploy>
+          <FullDeploy>False</FullDeploy>
           <DebuggerType>Managed</DebuggerType>
           <DebuggerAgentType>Managed</DebuggerAgentType>
           <Tombstone>False</Tombstone>
