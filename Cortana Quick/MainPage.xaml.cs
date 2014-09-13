@@ -1,5 +1,6 @@
 ﻿using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using Microsoft.Phone.Tasks;
 using QuickDatabase;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,15 @@ namespace Cortana_Quick
             ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem("settings");
             appBarMenuItem.Click += AppBarMenuItem_Click;
             ApplicationBar.MenuItems.Add(appBarMenuItem);
+
+            ApplicationBarMenuItem appBarMenuItemReview = new ApplicationBarMenuItem("review and rate me!");
+            appBarMenuItemReview.Click += appBarMenuItemReview_Click;
+        }
+
+        void appBarMenuItemReview_Click(object sender, EventArgs e)
+        {
+            MarketplaceReviewTask task = new MarketplaceReviewTask();
+            task.Show();
         }
 
         void AppBarMenuItem_Click(object sender, EventArgs e)
@@ -90,6 +100,7 @@ namespace Cortana_Quick
 
         private async void HandleAskCommands(string question)
         {
+            question = question.Replace("?", String.Empty);
             string[] words = question.Split(' ');
             List<Notes> results = new List<Notes>();
             Notes note = new Notes();
@@ -106,21 +117,36 @@ namespace Cortana_Quick
             {
                 //Here is where is the magic, selecting the most frequent note found using the users given keywords
                 Notes mostFrequent = results.GroupBy(id => id).OrderByDescending(g => g.Count()).Take(1).Select(g => g.Key).First();
-                mostFrequent.note.Replace("my", "your");
-                try
+                string result = mostFrequent.note;
+                mostFrequent.note = mostFrequent.note.Replace("my ", "your ");
+                mostFrequent.note = mostFrequent.note.Replace("i ", "you ");
+                if (mostFrequent != null || !String.IsNullOrEmpty(mostFrequent.note))
                 {
-                    talk = new SpeechSynthesizer();
-                    await talk.SpeakTextAsync(mostFrequent.note);
-                    MessageBox.Show(mostFrequent.note, "Here is what found", MessageBoxButton.OK);
+                    try
+                    {
+                        using (talk = new SpeechSynthesizer())
+                        {
+                            await talk.SpeakTextAsync(mostFrequent.note);
+                        }
+                        MessageBox.Show(mostFrequent.note, "Here is what i found:", MessageBoxButton.OK);
+                    }
+                    catch (Exception exception)
+                    {
+                        MessageBox.Show("Error when trying to use Text to speech", "Error", MessageBoxButton.OK);
+                    }
                 }
-                catch (Exception exception)
+                else
                 {
-                    MessageBox.Show("Error when trying to use Text to speech","Error", MessageBoxButton.OK);
+                    using (talk = new SpeechSynthesizer())
+                    {
+                        await talk.SpeakTextAsync("Sorry, i couldn't find any matching notes.");
+                    }
+                    MessageBox.Show(mostFrequent.note, "Here is what found", MessageBoxButton.OK);
                 }
             }
             else
             {
-                MessageBox.Show("I couldn't find any matching note, try again","Oops",MessageBoxButton.OK);
+                MessageBox.Show("I couldn't find any matching note, try again", "Oops", MessageBoxButton.OK);
             }
         }
 
