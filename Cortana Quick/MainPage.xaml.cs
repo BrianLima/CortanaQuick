@@ -36,6 +36,7 @@ namespace Cortana_Quick
 
             ApplicationBarMenuItem appBarMenuItemReview = new ApplicationBarMenuItem("review and rate me!");
             appBarMenuItemReview.Click += appBarMenuItemReview_Click;
+            ApplicationBar.MenuItems.Add(appBarMenuItemReview);
         }
 
         void appBarMenuItemReview_Click(object sender, EventArgs e)
@@ -117,18 +118,22 @@ namespace Cortana_Quick
             {
                 //Here is where is the magic, selecting the most frequent note found using the users given keywords
                 Notes mostFrequent = results.GroupBy(id => id).OrderByDescending(g => g.Count()).Take(1).Select(g => g.Key).First();
-                string result = mostFrequent.note;
                 mostFrequent.note = mostFrequent.note.Replace("my ", "your ");
-                mostFrequent.note = mostFrequent.note.Replace("i ", "you ");
+                mostFrequent.note = mostFrequent.note.Replace("i ", "You ");
                 if (mostFrequent != null || !String.IsNullOrEmpty(mostFrequent.note))
                 {
+                    if (!mostFrequent.note.StartsWith("You"))
+                    {
+                        mostFrequent.note = "You " + mostFrequent.note;
+                    }
                     try
                     {
+                        MessageBox.Show(mostFrequent.note, "Here is what i found:", MessageBoxButton.OK);
+
                         using (talk = new SpeechSynthesizer())
                         {
                             await talk.SpeakTextAsync(mostFrequent.note);
                         }
-                        MessageBox.Show(mostFrequent.note, "Here is what i found:", MessageBoxButton.OK);
                     }
                     catch (Exception exception)
                     {
