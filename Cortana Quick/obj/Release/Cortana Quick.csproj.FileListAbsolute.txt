@@ -91,3 +91,4 @@ C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\
 C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Release\ProjectArchitectures.txt
 C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Release\MDILProjectFiles.xml
 C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Release\XapCacheFile.xml
+C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Release\TutorialPage.g.cs

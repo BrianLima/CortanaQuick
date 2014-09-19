@@ -34,9 +34,18 @@ namespace Cortana_Quick
             appBarMenuItem.Click += AppBarMenuItem_Click;
             ApplicationBar.MenuItems.Add(appBarMenuItem);
 
+            ApplicationBarMenuItem appBarMenuItemTutorial = new ApplicationBarMenuItem("tutorial");
+            appBarMenuItemTutorial.Click += appBarMenuItemTutorial_Click;
+            ApplicationBar.MenuItems.Add(appBarMenuItemTutorial);
+
             ApplicationBarMenuItem appBarMenuItemReview = new ApplicationBarMenuItem("review and rate me!");
             appBarMenuItemReview.Click += appBarMenuItemReview_Click;
             ApplicationBar.MenuItems.Add(appBarMenuItemReview);
+        }
+
+        void appBarMenuItemTutorial_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/TutorialPage.xaml", UriKind.Relative));
         }
 
         void appBarMenuItemReview_Click(object sender, EventArgs e)
@@ -245,6 +254,15 @@ namespace Cortana_Quick
                 Title = "Cortana Quick"
             };
            tile.Update(standardData);
+        }
+
+        private void LayoutRoot_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (StorageHelper.GetSetting("FIRST_USE", true))
+            {
+                StorageHelper.StoreSetting("FIRST_USE", false, true);
+                NavigationService.Navigate(new Uri("/TutorialPage.xaml", UriKind.Relative));
+            }
         }
     }
 }

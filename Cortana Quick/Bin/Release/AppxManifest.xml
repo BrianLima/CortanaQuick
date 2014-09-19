@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="28788Briano.CortanaQuick" Publisher="CN=06F6B67F-67A4-40D5-8234-77A470002853" Version="1.1.0.1" ProcessorArchitecture="neutral" />
+  <Identity Name="28788Briano.CortanaQuick" Publisher="CN=06F6B67F-67A4-40D5-8234-77A470002853" Version="1.2.0.0" ProcessorArchitecture="neutral" />
   <mp:PhoneIdentity PhoneProductId="bd0dec9a-2742-4bc7-bbe2-4f7f0de109c1" PhonePublisherId="10aad829-6964-480d-8a51-1dd372f097c9" />
   <Properties>
     <DisplayName>Cortana Quick</DisplayName>

@@ -97,6 +97,15 @@ namespace Cortana_Quick.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to true.
+        /// </summary>
+        public static string First_Use {
+            get {
+                return ResourceManager.GetString("First_Use", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1.
         /// </summary>
         public static string Maximum_Date {

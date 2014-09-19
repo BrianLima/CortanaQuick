@@ -145,4 +145,7 @@
   <data name="AppBarButtonTextSave" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="First_Use" xml:space="preserve">
+    <value>true</value>
+  </data>
 </root>
