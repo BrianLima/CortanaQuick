@@ -137,12 +137,11 @@ namespace Cortana_Quick
                     }
                     try
                     {
-                        MessageBox.Show(mostFrequent.note, "Here is what i found:", MessageBoxButton.OK);
-
                         using (talk = new SpeechSynthesizer())
                         {
                             await talk.SpeakTextAsync(mostFrequent.note);
                         }
+                        MessageBox.Show(mostFrequent.note, "Here is what i found:", MessageBoxButton.OK);
                     }
                     catch (Exception exception)
                     {

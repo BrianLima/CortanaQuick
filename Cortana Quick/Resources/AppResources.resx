@@ -148,4 +148,7 @@
   <data name="First_Use" xml:space="preserve">
     <value>true</value>
   </data>
+  <data name="Database_Version" xml:space="preserve">
+    <value>1.0</value>
+  </data>
 </root>

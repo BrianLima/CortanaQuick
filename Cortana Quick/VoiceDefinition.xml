@@ -22,6 +22,7 @@
     <Command Name="AskCommands">
       <Example> Where is my car </Example>
       <ListenFor>where {AskKeyWords}</ListenFor>
+      <ListenFor>parked</ListenFor>
       <Feedback> Checking this information... </Feedback>
       <Navigate Target="MainPage.xaml" />
     </Command>
@@ -29,6 +30,8 @@
     <PhraseTopic Label="NoteKeyWords" Scenario="Natural Language">
       <Subject>Left</Subject>
       <Subject>Parked</Subject>
+      <Subject>put</Subject>
+      <Subject>kept</Subject>
     </PhraseTopic>
 
     <PhraseTopic Label="AskKeyWords" Scenario="Natural Language">

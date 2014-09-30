@@ -25,16 +25,24 @@
             <phone:PanoramaItem Header="hello">
                 <Grid>
                     <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="Welcome to Cortana Quick. Here you can use Cortana to do quick audible notes!" VerticalAlignment="Top" Height="463"/>
-                    <Image HorizontalAlignment="Left" Height="233" Margin="97,139,0,0" VerticalAlignment="Top" Width="235" Source="/Assets/StoreLogo.png"/>
+                    <Image HorizontalAlignment="Left" Height="233" Margin="93,145,0,0" VerticalAlignment="Top" Width="235" Source="/Assets/StoreLogo.png"/>
                 </Grid>
             </phone:PanoramaItem>
 
             <!--Panorama item 2-->
-            <phone:PanoramaItem Header="making a note">
+            <phone:PanoramaItem Header="taking a note">
                 <Grid>
                     <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="Open Cortana by pressing the search button, or touching her live tile or, if your Windows Phone is updated with the Lumia Denim update, just say 'Hey Cortana'." VerticalAlignment="Top" Height="109"/>
                     <TextBlock Margin="10,124,10,0" TextWrapping="Wrap" Text="Now, say to her Quick + something you want to be remembered later:" VerticalAlignment="Top" Height="54"/>
                     <TextBlock Margin="10,200,10,0" TextWrapping="Wrap" Text="Quick Parked my car at sesame street" VerticalAlignment="Top" Height="54" FontWeight="Bold" TextAlignment="Center"/>
+                    <TextBlock Margin="10,232,10,0" TextWrapping="Wrap" Text="Quick I left my keys on my room" VerticalAlignment="Top" Height="54" FontWeight="Bold" TextAlignment="Center"/>
+                    <TextBlock Margin="10,264,10,0" TextWrapping="Wrap" Text="Quick I put my torch on the dining table" VerticalAlignment="Top" Height="54" FontWeight="Bold" TextAlignment="Center"/>
+                    <TextBlock Margin="10,296,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="54" FontWeight="Bold" TextAlignment="Center">
+                    	<Run Text="Quick "/>
+                    	<Run Text="I kept my .net book in the "/>
+                    	<Run Text="my "/>
+                    	<Run Text="bag"/>
+                    </TextBlock>
                 </Grid>
             </phone:PanoramaItem>
 
@@ -43,9 +51,25 @@
                 <Grid>
                     <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="Later, when you want to know something that you noted, open Cortana one more time and say to her:" VerticalAlignment="Top" Height="91"/>
                     <TextBlock Margin="10,106,10,0" TextWrapping="Wrap" Text="Quick where is my car?" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center"/>
-                    <TextBlock Margin="10,151,10,0" TextWrapping="Wrap" Text="Then, she will answear you with:" VerticalAlignment="Top" Height="30"/>
-                    <TextBlock Margin="10,186,10,0" TextWrapping="Wrap" Text="Your car is at sesame street" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center"/>
-                    <TextBlock Margin="10,231,10,0" TextWrapping="Wrap" Text="Now you are good to go! If you have any suggestions to improve this app, review it, i'll be glad to hear your opinion. Thanks!" VerticalAlignment="Top" Height="242" TextAlignment="Left"/>
+                    <TextBlock Margin="10,213,10,0" TextWrapping="Wrap" Text="Then, she will answear you with:" VerticalAlignment="Top" Height="30"/>
+                    <TextBlock Margin="10,248,10,0" TextWrapping="Wrap" Text="Your car is at sesame street" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center"/>
+                    <TextBlock Margin="10,348,10,0" TextWrapping="Wrap" Text="Now you are good to go! If you have any suggestions to improve this app, review it, i'll be glad to hear your opinion. Thanks!" VerticalAlignment="Top" Height="90" TextAlignment="Left"/>
+                    <TextBlock Margin="10,136,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center">
+                    	<Run Text="Quick where did i left my keys"/>
+                    	<Run Text="?"/>
+                    </TextBlock>
+                    <TextBlock Margin="10,168,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center" Text="Quick where did i put my torch?"/>
+                    <TextBlock Margin="10,274,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center">
+                    	<Run Text="You"/>
+                    	<Run Text=" left  your "/>
+                    	<Run Text="keys at your room"/>
+                    </TextBlock>
+                    <TextBlock Margin="10,303,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center">
+                    	<Run Text="Your "/>
+                    	<Run Text="torch "/>
+                    	<Run Text="is "/>
+                    	<Run Text="on the dinning table"/>
+                    </TextBlock>
                 </Grid>
             </phone:PanoramaItem>
         </phone:Panorama>
