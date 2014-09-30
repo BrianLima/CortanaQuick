@@ -14,32 +14,31 @@
 
     <Command Name="NoteCommands">
       <Example> Left my car at sesame street </Example>
-      <ListenFor>{NoteKeyWords}</ListenFor>
+      <ListenFor> i {NoteKeyWords} </ListenFor>
       <Feedback> Noting this... </Feedback>
       <Navigate Target="MainPage.xaml" />
     </Command>
 
     <Command Name="AskCommands">
       <Example> Where is my car </Example>
-      <ListenFor>where {AskKeyWords}</ListenFor>
-      <ListenFor>parked</ListenFor>
+      <ListenFor> {AskKeyWords} </ListenFor>
       <Feedback> Checking this information... </Feedback>
       <Navigate Target="MainPage.xaml" />
     </Command>
     
     <PhraseTopic Label="NoteKeyWords" Scenario="Natural Language">
-      <Subject>Left</Subject>
-      <Subject>Parked</Subject>
+      <Subject>left</Subject>
+      <Subject>parked</Subject>
       <Subject>put</Subject>
       <Subject>kept</Subject>
     </PhraseTopic>
 
     <PhraseTopic Label="AskKeyWords" Scenario="Natural Language">
-      <Subject>Where</Subject>
+      <Subject>where</Subject>
       <Subject>did</Subject>
       <Subject>does</Subject>
-      <Subject>What</Subject>
-      <Subject>Who</Subject>
+      <Subject>what</Subject>
+      <Subject>who</Subject>
     </PhraseTopic>
 
   </CommandSet>

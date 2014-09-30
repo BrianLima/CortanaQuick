@@ -18,5 +18,6 @@
         </Grid.ColumnDefinitions>
         <TextBlock Margin="9,40,49,0" Text="{Binding date}" VerticalAlignment="Top" Grid.Column="1" Height="27" FontSize="14"/>
         <TextBlock Margin="9,5,10,0" TextWrapping="Wrap" Text="{Binding note}" VerticalAlignment="Top" Height="35" FontSize="28" Grid.Column="1"/>
+        <Rectangle Grid.Column="1" Fill="#FFF4F4F5" Height="5" Margin="9,65,5,0" VerticalAlignment="Top"/>
     </Grid>
 </UserControl>
