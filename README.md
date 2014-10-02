@@ -1,4 +1,4 @@
-# Cortana Quick #
+# Quick for Cortana #
 
 - Quick audible notes for Cortana.
 
@@ -11,6 +11,8 @@ Using Cortana's api, we retrieve a single string that will be characterized as a
 If the command entered via Cortana is characterized as a NoteCommand, the user input is stored at the isolated storage for the app and binded to the list of notes that the user have noted on the main page.
 
 If the command entered is a AskCommand, the user input is treated as such, splitting the words on the phrase, then, we eliminate every common word that might be, such as connectives. With these probably keywords we search for phrases that contain these on the database and retrieve all the notes that match this, after every keyword have been used, we have a list with every possible match, but, the note that appears more times on our list is very likely to be the answer to the user question. It's not a very mathematical approach, but it proved to be very accurate using statistics and our tests. 
+
+The app logo on version 2.0 and higher was designed by @gladia.
 
 
 This software is licensed under the MIT license
