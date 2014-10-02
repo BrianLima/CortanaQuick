@@ -19,13 +19,13 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <phone:Panorama Title="cortana quick" Grid.ColumnSpan="2">
+        <phone:Panorama Title="quick for cortana" Grid.ColumnSpan="2">
 
             <!--Panorama item 1-->
             <phone:PanoramaItem Header="hello">
                 <Grid>
-                    <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="Welcome to Cortana Quick. Here you can use Cortana to do quick audible notes!" VerticalAlignment="Top" Height="463"/>
-                    <Image HorizontalAlignment="Left" Height="233" Margin="93,145,0,0" VerticalAlignment="Top" Width="235" Source="/Assets/StoreLogo.png"/>
+                    <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="Welcome to Quick, the first audible notes extension for Cortana. Here you can use Cortana to do quick audible notes! Let's go trough a fast how-to" VerticalAlignment="Top" Height="463"/>
+                    <Image HorizontalAlignment="Left" Height="233" Margin="93,145,0,0" VerticalAlignment="Top" Width="235" Source="/Assets/Quick.png"/>
                 </Grid>
             </phone:PanoramaItem>
 
@@ -33,8 +33,8 @@
             <phone:PanoramaItem Header="taking a note">
                 <Grid>
                     <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="Open Cortana by pressing the search button, or touching her live tile or, if your Windows Phone is updated with the Lumia Denim update, just say 'Hey Cortana'." VerticalAlignment="Top" Height="109"/>
-                    <TextBlock Margin="10,124,10,0" TextWrapping="Wrap" Text="Now, say to her Quick + something you want to be remembered later:" VerticalAlignment="Top" Height="54"/>
-                    <TextBlock Margin="10,200,10,0" TextWrapping="Wrap" Text="Quick Parked my car at sesame street" VerticalAlignment="Top" Height="54" FontWeight="Bold" TextAlignment="Center"/>
+                    <TextBlock Margin="10,124,10,0" TextWrapping="Wrap" Text="Now, say to her Quick + I + something you want to be remembered later:" VerticalAlignment="Top" Height="54"/>
+                    <TextBlock Margin="10,200,10,0" TextWrapping="Wrap" Text="Quick I Parked my car at sesame street" VerticalAlignment="Top" Height="54" FontWeight="Bold" TextAlignment="Center"/>
                     <TextBlock Margin="10,232,10,0" TextWrapping="Wrap" Text="Quick I left my keys on my room" VerticalAlignment="Top" Height="54" FontWeight="Bold" TextAlignment="Center"/>
                     <TextBlock Margin="10,264,10,0" TextWrapping="Wrap" Text="Quick I put my torch on the dining table" VerticalAlignment="Top" Height="54" FontWeight="Bold" TextAlignment="Center"/>
                     <TextBlock Margin="10,296,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="54" FontWeight="Bold" TextAlignment="Center">

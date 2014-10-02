@@ -164,6 +164,7 @@
     <Content Include="Assets\check.png" />
     <Content Include="Assets\close.png" />
     <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\quick.png" />
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\SquareTile150x150.png" />
     <Content Include="Assets\SquareTile71x71.png" />
