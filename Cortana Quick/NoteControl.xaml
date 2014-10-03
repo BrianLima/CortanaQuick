@@ -17,7 +17,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <TextBlock Margin="9,40,49,0" Text="{Binding date}" VerticalAlignment="Top" Grid.Column="1" Height="27" FontSize="14"/>
-        <TextBlock Margin="9,5,10,0" TextWrapping="Wrap" Text="{Binding note}" VerticalAlignment="Top" Height="35" FontSize="28" Grid.Column="1"/>
-        <Rectangle Grid.Column="1" Fill="#FF292929" Height="2" Margin="9,65,5,0" VerticalAlignment="Top"/>
+        <TextBlock Margin="9,3,10,0" TextWrapping="Wrap" Text="{Binding note}" VerticalAlignment="Top" Height="37" FontSize="28" Grid.Column="1"/>
+        <Rectangle Grid.Column="1" Fill="#FF292929" Height="2" Margin="4,0,0,3" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="370"/>
     </Grid>
 </UserControl>

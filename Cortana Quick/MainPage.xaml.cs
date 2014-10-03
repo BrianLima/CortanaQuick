@@ -16,7 +16,7 @@ namespace Cortana_Quick
     public partial class MainPage : PhoneApplicationPage
     {  
         SpeechSynthesizer talk;
-        public static List<String> phrases = new List<String> {"are", "my","is", "on", "where", "i", "left", "does", "did"};
+        public static List<String> phrases = new List<String> {"are", "my","is", "on", "where", "i", "left", "does", "did", "put", "kept"};
 
         public MainPage()
         {
@@ -143,7 +143,7 @@ namespace Cortana_Quick
                         }
                         MessageBox.Show(mostFrequent.note, "Here is what i found:", MessageBoxButton.OK);
                     }
-                    catch (Exception exception)
+                    catch (Exception)
                     {
                         MessageBox.Show("Error when trying to use Text to speech", "Error", MessageBoxButton.OK);
                     }
@@ -248,9 +248,9 @@ namespace Cortana_Quick
             StandardTileData standardData = new StandardTileData
             {
                 BackContent = note,
-                BackTitle = "Cortana Quick",
+                BackTitle = "Quick for Cortana",
                 BackgroundImage = new Uri("/Assets/ApplicationIcon.png", UriKind.Relative),
-                Title = "Cortana Quick"
+                Title = "Quick for Cortana"
             };
            tile.Update(standardData);
         }
