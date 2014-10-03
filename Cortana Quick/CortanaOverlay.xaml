@@ -7,9 +7,53 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
+    Visibility="{Binding VisibilityForDesign, RelativeSource={RelativeSource Self}}"
     d:DesignHeight="480" d:DesignWidth="480">
-    
-    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}">
 
+    <UserControl.Resources>
+        <Storyboard x:Name="showContent">
+            <DoubleAnimation Duration="0:0:0.5" To="1" Storyboard.TargetName="LayoutRoot" Storyboard.TargetProperty="Opacity" />
+            <DoubleAnimation Duration="0:0:0.5" To="0" Storyboard.TargetName="xProjection" Storyboard.TargetProperty="RotationX" />
+        </Storyboard>
+        <Storyboard x:Name="hideContent">
+            <DoubleAnimation Duration="0:0:0.5" To="0" Storyboard.TargetName="LayoutRoot" Storyboard.TargetProperty="Opacity" />
+            <DoubleAnimation Duration="0:0:0.5" To="90" Storyboard.TargetName="xProjection" Storyboard.TargetProperty="RotationX" />
+        </Storyboard>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <Rectangle Fill="{StaticResource PhoneBackgroundBrush}" Opacity="0.6"/>
+        <Border x:Name="content" VerticalAlignment="Top" Background="{StaticResource PhoneChromeBrush}" Height="280">
+            <Grid Margin="24,10,24,40">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" MinHeight="132" />
+                    <RowDefinition Height="Auto" MinHeight="60" />
+                </Grid.RowDefinitions>
+                <Rectangle x:Name="Cortana" Margin="0,0,140,55" Grid.RowSpan="2" Fill="{StaticResource PhoneAccentBrush}">
+                    <Rectangle.OpacityMask>
+                        <ImageBrush ImageSource="/Assets/CortanaCircle.png" />
+                    </Rectangle.OpacityMask>                
+                </Rectangle>
+                <TextBlock x:Name="title" Grid.ColumnSpan="2" Margin="85,13,10,70" Text="I heard you say:"
+                           Style="{StaticResource PhoneTextTitle2Style}" FontWeight="Bold" TextWrapping="Wrap" Grid.Row="1" />
+
+                <TextBlock x:Name="message" Grid.ColumnSpan="2" Grid.Row="1" Margin="12,82,10,6" 
+                           Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="Wrap" />
+
+                <Button x:Name="yesButton" Margin="0,29,0,-49" Grid.Row="2" Content="Yes"/>
+                <Button x:Name="noButton" Margin="0,29,0,-49" Grid.Row="2" Grid.Column="1" Content="No"/>
+                <TextBlock x:Name="howSound" Grid.ColumnSpan="2" Grid.Row="2" Margin="12,6,10,27" Text="Sounds good?"
+                	Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="Wrap" />
+
+            </Grid>
+            <Border.Projection>
+                <PlaneProjection x:Name="xProjection" />
+            </Border.Projection>
+        </Border>
     </Grid>
 </UserControl>

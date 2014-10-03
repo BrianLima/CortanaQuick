@@ -170,6 +170,7 @@
     <Content Include="Assets\BadgeLogo.png" />
     <Content Include="Assets\check.png" />
     <Content Include="Assets\close.png" />
+    <Content Include="Assets\CortanaCircle.png" />
     <Content Include="Assets\Logo.png" />
     <Content Include="Assets\quick.png" />
     <Content Include="Assets\SplashScreen.png" />
