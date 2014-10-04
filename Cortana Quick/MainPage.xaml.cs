@@ -141,11 +141,11 @@ namespace Cortana_Quick
                         {
                             await talk.SpeakTextAsync(mostFrequent.note);
                         }
-                        MessageBox.Show(mostFrequent.note, "Here is what i found:", MessageBoxButton.OK);
+                        //MessageBox.Show(mostFrequent.note, "Here is what i found:", MessageBoxButton.OK);
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Error when trying to use Text to speech", "Error", MessageBoxButton.OK);
+                        //MessageBox.Show("Error when trying to use Text to speech", "Error", MessageBoxButton.OK);
                     }
                 }
                 else
@@ -154,12 +154,12 @@ namespace Cortana_Quick
                     {
                         await talk.SpeakTextAsync("Sorry, i couldn't find any matching notes.");
                     }
-                    MessageBox.Show(mostFrequent.note, "Here is what found", MessageBoxButton.OK);
+                    //MessageBox.Show(mostFrequent.note, "Here is what found", MessageBoxButton.OK);
                 }
             }
             else
             {
-                MessageBox.Show("I couldn't find any matching note, try again", "Oops", MessageBoxButton.OK);
+                //MessageBox.Show("I couldn't find any matching note, try again", "Oops", MessageBoxButton.OK);
             }
         }
 
@@ -174,7 +174,7 @@ namespace Cortana_Quick
             
             if (verify)
             {
-                a = MessageBox.Show(text, "Heard you say:", MessageBoxButton.OKCancel);
+                a = await CortanaOverlay.ShowAsync(text, "I heard you say:", "Yes", "No");
             }
 
             if (a != MessageBoxResult.Cancel)
@@ -216,7 +216,7 @@ namespace Cortana_Quick
             }
             catch (Exception vcdEx)
             {
-                MessageBox.Show(vcdEx.Message);
+                //MessageBox.Show(vcdEx.Message);
             }
         }
 
@@ -237,7 +237,7 @@ namespace Cortana_Quick
             if (mi != null)
             {
                 Notes note = mi.DataContext as Notes;
-                if (!note.DestroyNote()) MessageBox.Show("Error while deleting your note");
+                //if (!note.DestroyNote()) MessageBox.Show("Error while deleting your note");
                 NotesList.ItemsSource = note.GetAllNotes();
             }
         }
