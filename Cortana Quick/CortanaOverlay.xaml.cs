@@ -9,7 +9,7 @@ using Microsoft.Phone.Shell;
 
 namespace Cortana_Quick
 {
-    public partial class CortanaOverlay : UserControl
+    public partial class CortanaOverlay : Grid
     {
         private PhoneApplicationPage _page;
         private Color _originalTrayColor;
@@ -73,7 +73,7 @@ namespace Cortana_Quick
             SwivelTransition transitionIn = new SwivelTransition();
             transitionIn.Mode = SwivelTransitionMode.BackwardIn;
 
-            ITransition transition = transitionIn.GetTransition(LayoutRoot);
+            ITransition transition = transitionIn.GetTransition(LayoutRootX);
             EventHandler transitionCompletedHandler = null;
             transitionCompletedHandler = (s, e) =>
             {
@@ -102,7 +102,7 @@ namespace Cortana_Quick
             SwivelTransition transitionOut = new SwivelTransition();
             transitionOut.Mode = SwivelTransitionMode.BackwardOut;
 
-            ITransition transition = transitionOut.GetTransition(LayoutRoot);
+            ITransition transition = transitionOut.GetTransition(LayoutRootX);
             EventHandler transitionCompletedHandler = null;
             transitionCompletedHandler = (s, e) =>
             {
