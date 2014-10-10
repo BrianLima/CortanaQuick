@@ -17,7 +17,7 @@ namespace Cortana_Quick
     {  
         SpeechSynthesizer talk;
         public static List<String> phrases = new List<String> {"are", "my","is", "on", "where", "i", "left", "does", "did", "put", "kept"};
-
+        
         public MainPage()
         {
             InitializeComponent();
@@ -41,6 +41,15 @@ namespace Cortana_Quick
             ApplicationBarMenuItem appBarMenuItemReview = new ApplicationBarMenuItem("review and rate me!");
             appBarMenuItemReview.Click += appBarMenuItemReview_Click;
             ApplicationBar.MenuItems.Add(appBarMenuItemReview);
+
+            ApplicationBarMenuItem appBarMenuItemtest = new ApplicationBarMenuItem("test");
+            appBarMenuItemtest.Click += appBarMenuItemReviewtest_Click;
+            ApplicationBar.MenuItems.Add(appBarMenuItemtest);
+        }
+
+        private void appBarMenuItemReviewtest_Click(object sender, EventArgs e)
+        {
+            CortanaOverlay();
         }
 
         void appBarMenuItemTutorial_Click(object sender, EventArgs e)
@@ -174,7 +183,7 @@ namespace Cortana_Quick
             
             if (verify)
             {
-                a = await CortanaOverlay.ShowAsync(text, "I heard you say:", "Yes", "No");
+                //a = await CortanaOverlay.ShowAsync(text, "I heard you say:", "Yes", "No");
             }
 
             if (a != MessageBoxResult.Cancel)
@@ -262,6 +271,25 @@ namespace Cortana_Quick
                 StorageHelper.StoreSetting("FIRST_USE", false, true);
                 NavigationService.Navigate(new Uri("/TutorialPage.xaml", UriKind.Relative));
             }
+        }
+
+        private void CortanaOverlay()
+        {
+            CortanaOverlay data = new CortanaOverlay();
+            data.Content = "sdasdsada";
+            data.Message = "ytryrytryt";
+            data.Title = "gfdgfdgdf";
+
+            CustomMessageBox CortanaOverlay = new CustomMessageBox()
+            {
+                ContentTemplate = (DataTemplate)this.Resources["CortanaOverlay"],
+                LeftButtonContent = "Yes",
+                RightButtonContent = "No",
+                IsFullScreen = true,
+                Content = data
+            };
+
+            CortanaOverlay.Show(); 
         }
     }
 }
