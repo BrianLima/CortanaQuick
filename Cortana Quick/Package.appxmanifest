@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="28788Briano.CortanaQuick" Publisher="CN=06F6B67F-67A4-40D5-8234-77A470002853" Version="2.0.0.0" />
+  <Identity Name="28788Briano.CortanaQuick" Publisher="CN=06F6B67F-67A4-40D5-8234-77A470002853" Version="2.1.0.0" />
   <mp:PhoneIdentity PhoneProductId="bd0dec9a-2742-4bc7-bbe2-4f7f0de109c1" PhonePublisherId="10aad829-6964-480d-8a51-1dd372f097c9" />
   <Properties>
     <DisplayName>Quick for Cortana</DisplayName>
