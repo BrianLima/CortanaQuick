@@ -5,6 +5,6 @@ namespace Cortana_Quick
     {
         public string Title { get; set; }
         public string Message { get; set; }
-        public string Content { get; set; }
+        public string Confirmation { get; set; }
     }
 }

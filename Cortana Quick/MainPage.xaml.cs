@@ -17,7 +17,9 @@ namespace Cortana_Quick
     {  
         SpeechSynthesizer talk;
         public static List<String> phrases = new List<String> {"are", "my","is", "on", "where", "i", "left", "does", "did", "put", "kept"};
-        
+        bool noting = false;
+        Notes note;
+
         public MainPage()
         {
             InitializeComponent();
@@ -41,15 +43,6 @@ namespace Cortana_Quick
             ApplicationBarMenuItem appBarMenuItemReview = new ApplicationBarMenuItem("review and rate me!");
             appBarMenuItemReview.Click += appBarMenuItemReview_Click;
             ApplicationBar.MenuItems.Add(appBarMenuItemReview);
-
-            ApplicationBarMenuItem appBarMenuItemtest = new ApplicationBarMenuItem("test");
-            appBarMenuItemtest.Click += appBarMenuItemReviewtest_Click;
-            ApplicationBar.MenuItems.Add(appBarMenuItemtest);
-        }
-
-        private void appBarMenuItemReviewtest_Click(object sender, EventArgs e)
-        {
-            CortanaOverlay();
         }
 
         void appBarMenuItemTutorial_Click(object sender, EventArgs e)
@@ -117,7 +110,7 @@ namespace Cortana_Quick
             }
         }
 
-        private async void HandleAskCommands(string question)
+        private void HandleAskCommands(string question)
         {
             question = question.Replace("?", String.Empty);
             string[] words = question.Split(' ');
@@ -146,29 +139,21 @@ namespace Cortana_Quick
                     }
                     try
                     {
-                        using (talk = new SpeechSynthesizer())
-                        {
-                            await talk.SpeakTextAsync(mostFrequent.note);
-                        }
-                        //MessageBox.Show(mostFrequent.note, "Here is what i found:", MessageBoxButton.OK);
+                        CortanaOverlay("Here is what i found:", mostFrequent.note, String.Empty);
                     }
                     catch (Exception)
                     {
-                        //MessageBox.Show("Error when trying to use Text to speech", "Error", MessageBoxButton.OK);
+                        MessageBox.Show("Error when trying to use Text to speech", "Error", MessageBoxButton.OK);
                     }
                 }
                 else
                 {
-                    using (talk = new SpeechSynthesizer())
-                    {
-                        await talk.SpeakTextAsync("Sorry, i couldn't find any matching notes.");
-                    }
-                    //MessageBox.Show(mostFrequent.note, "Here is what found", MessageBoxButton.OK);
+                    CortanaOverlay("Sorry, i couldn't find anything", String.Empty, String.Empty);
                 }
             }
             else
             {
-                //MessageBox.Show("I couldn't find any matching note, try again", "Oops", MessageBoxButton.OK);
+                CortanaOverlay("Sorry, i couldn't find anything", String.Empty, String.Empty);
             }
         }
 
@@ -176,27 +161,19 @@ namespace Cortana_Quick
         /// We found a note command, so we save it
         /// </summary>
         /// <param name="note"></param>
-        private async void HandleNoteCommands(string text)
+        private void HandleNoteCommands(string text)
         {
+            noting = true;
             bool verify = StorageHelper.GetSetting("VERIFY_INPUT", true);
-            var a = MessageBoxResult.Yes;
-            
+            CortanaOverlay("I heard you say:", text, "Should i note it?");
             if (verify)
             {
-                //a = await CortanaOverlay.ShowAsync(text, "I heard you say:", "Yes", "No");
-            }
-
-            if (a != MessageBoxResult.Cancel)
-            {
-                Notes note = new Notes();
+                note = new Notes();
                 note.date = DateTime.Now;
                 note.note = text;
-                note.Save();
-                note = null;
-                UpdateLiveTile(text);
             }
         }
-        
+
         /// <summary>
         /// If Cortana gave us a Null or empty string or '...' there was a connection problem 
         /// </summary>
@@ -225,7 +202,7 @@ namespace Cortana_Quick
             }
             catch (Exception vcdEx)
             {
-                //MessageBox.Show(vcdEx.Message);
+                MessageBox.Show(vcdEx.Message);
             }
         }
 
@@ -246,12 +223,12 @@ namespace Cortana_Quick
             if (mi != null)
             {
                 Notes note = mi.DataContext as Notes;
-                //if (!note.DestroyNote()) MessageBox.Show("Error while deleting your note");
+                if (!note.DestroyNote()) MessageBox.Show("Error while deleting your note");
                 NotesList.ItemsSource = note.GetAllNotes();
             }
         }
 
-        private async void UpdateLiveTile(string note)
+        private void UpdateLiveTile(string note)
         {
             ShellTile tile = ShellTile.ActiveTiles.FirstOrDefault();
             StandardTileData standardData = new StandardTileData
@@ -273,23 +250,73 @@ namespace Cortana_Quick
             }
         }
 
-        private void CortanaOverlay()
+        private void CortanaOverlay(String title, String message, String confirmation)
         {
+            string left, right;
             CortanaOverlayData data = new CortanaOverlayData();
-            data.Content = "Does it sounds good?";
-            data.Message = "mimimimimimimimimimim";
-            data.Title = "Hello Brian, i heard you say:";
+            data.Title = title;
+            data.Message = message;
+            data.Confirmation = confirmation;
+            if (!noting)
+            {
+                left = "Ok";
+                right = String.Empty;
+            }
+            else
+            {
+                left = "Yes";
+                right = "No";
+            }
 
             CustomMessageBox CortanaOverlay = new CustomMessageBox()
             {
                 ContentTemplate = (DataTemplate)this.Resources["CortanaOverlay"],
-                LeftButtonContent = "Yes",
-                RightButtonContent = "No",
+                LeftButtonContent = left,
+                RightButtonContent = right,
                 IsFullScreen = false,
                 Content = data
             };
 
-            CortanaOverlay.Show(); 
+            CortanaOverlay.Dismissing += CortanaOverlay_Dismissing;
+            Speech(title + "..." + message + "..." + confirmation);
+            CortanaOverlay.Show();
+        }
+
+        void CortanaOverlay_Dismissing(object sender, DismissingEventArgs e)
+        {
+            if (noting)
+            {
+                switch (e.Result)
+                {
+                    case CustomMessageBoxResult.LeftButton:
+                        note.Save();
+                        UpdateLiveTile(note.note);
+                        break;
+                    case CustomMessageBoxResult.None:
+                        break;
+                    case CustomMessageBoxResult.RightButton:
+                        break;
+                    default:
+                        break;
+                }  
+                NotesList.ItemsSource = note.GetAllNotes();
+            }
+            noting = false;
+        }
+
+        private async void Speech(string text)
+        {
+            talk = new SpeechSynthesizer();
+            try
+            {
+                await talk.SpeakTextAsync(text);
+                talk.Dispose();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error when trying to use Text to speech", "Error", MessageBoxButton.OK);
+                talk.Dispose();
+            }
         }
     }
 }
