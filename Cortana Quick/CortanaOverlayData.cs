@@ -1,7 +1,7 @@
 ﻿
 namespace Cortana_Quick
 {
-    public class CortanaOverlay
+    public class CortanaOverlayData
     {
         public string Title { get; set; }
         public string Message { get; set; }

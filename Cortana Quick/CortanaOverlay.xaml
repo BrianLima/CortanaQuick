@@ -1,0 +1,19 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Cortana_Quick" x:Class="Cortana_Quick.CortanaOverlay"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="320" d:DesignWidth="480">
+
+    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}" Height="320" VerticalAlignment="Top">
+        <TextBlock Margin="10,105,10,0" TextWrapping="Wrap" Text="{Binding Title}" VerticalAlignment="Top" Foreground="{StaticResource PhoneAccentBrush}" FontSize="36"/>
+        <TextBlock Margin="10,192,10,0" TextWrapping="Wrap" Text="{Binding Message}" VerticalAlignment="Top" Height="83" FontSize="24"/>
+        <TextBlock Margin="10,280,10,0" TextWrapping="Wrap" Text="{Binding Content}" VerticalAlignment="Top" Height="30"/>
+        <local:CortanaCircle HorizontalAlignment="Left" VerticalAlignment="Top"/>
+    </Grid>
+</UserControl>

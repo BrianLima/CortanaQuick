@@ -98,11 +98,14 @@
     <Compile Include="CortanaCircle.xaml.cs">
       <DependentUpon>CortanaCircle.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CortanaOverlay.xaml.cs">
+      <DependentUpon>CortanaOverlay.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CortanaOverlay.cs" />
+    <Compile Include="CortanaOverlayData.cs" />
     <Compile Include="NoteControl.xaml.cs">
       <DependentUpon>NoteControl.xaml</DependentUpon>
     </Compile>
@@ -131,6 +134,10 @@
     <Page Include="CortanaCircle.xaml">
       <Generator>MSBuild:MarkupCompilePass1</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CortanaOverlay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>

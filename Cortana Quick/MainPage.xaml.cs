@@ -275,17 +275,17 @@ namespace Cortana_Quick
 
         private void CortanaOverlay()
         {
-            CortanaOverlay data = new CortanaOverlay();
-            data.Content = "sdasdsada";
-            data.Message = "ytryrytryt";
-            data.Title = "gfdgfdgdf";
+            CortanaOverlayData data = new CortanaOverlayData();
+            data.Content = "Does it sounds good?";
+            data.Message = "mimimimimimimimimimim";
+            data.Title = "Hello Brian, i heard you say:";
 
             CustomMessageBox CortanaOverlay = new CustomMessageBox()
             {
                 ContentTemplate = (DataTemplate)this.Resources["CortanaOverlay"],
                 LeftButtonContent = "Yes",
                 RightButtonContent = "No",
-                IsFullScreen = true,
+                IsFullScreen = false,
                 Content = data
             };
 
