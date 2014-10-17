@@ -3,6 +3,7 @@
   <XAPFiles>
     <File>resources.pri</File>
     <File>Cortana Quick.dll</File>
+    <File>Assets\add.png</File>
     <File>Assets\AlignmentGrid.png</File>
     <File>Assets\BadgeLogo.png</File>
     <File>Assets\check.png</File>

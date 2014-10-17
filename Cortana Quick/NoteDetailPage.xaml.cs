@@ -24,7 +24,7 @@ namespace Cortana_Quick
             ApplicationBarIconButton appBarButtonSave = new ApplicationBarIconButton(new Uri("/Assets/check.png", UriKind.Relative));
             appBarButtonSave.Text = AppResources.AppBarButtonTextSave;
             ApplicationBar.Buttons.Add(appBarButtonSave);
-            appBarButtonSave.Click +=AppBarButtonSave_Click;
+            appBarButtonSave.Click += AppBarButtonSave_Click;
 
             ApplicationBarIconButton appBarButtonDelete = new ApplicationBarIconButton(new Uri("/Assets/close.png", UriKind.Relative));
             appBarButtonDelete.Text = AppResources.AppBarButtonTextDelete;
@@ -42,7 +42,14 @@ namespace Cortana_Quick
 
         private void AppBarButtonSave_Click(object sender, EventArgs e)
         {
-            note.UpdateNote(note.id, BoxNoteDetail.Text);
+            if (note.id > 0)
+            {
+                note.UpdateNote(note.id, BoxNoteDetail.Text);
+            }
+            else
+            {
+                note.Save();
+            }
             if (this.NavigationService.CanGoBack)
             {
                 this.NavigationService.GoBack();
@@ -55,7 +62,17 @@ namespace Cortana_Quick
             note = new Notes();
             base.OnNavigatedTo(e);
             int id = Int32.Parse(NavigationContext.QueryString["parameter"]);
-            note = note.GetNote(id);
+            if (id > 0)
+            {
+                note = note.GetNote(id);
+            }
+            else
+            {
+                note.note = String.Empty;
+                note.date = DateTime.Now;
+            }
+
+            ContentPanel.DataContext = note;
             BoxNoteDetail.Text = note.note;
             BlockNoteDate.Text = note.date.ToString();
         }

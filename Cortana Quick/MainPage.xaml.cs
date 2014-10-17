@@ -28,10 +28,13 @@ namespace Cortana_Quick
 
         private void BuildLocalizedApplicationBar()
         {
-            // Set the page's ApplicationBar to a new instance of ApplicationBar.
             ApplicationBar = new ApplicationBar();
 
-            // Create a new menu item with the localized string from AppResources.
+            ApplicationBarIconButton appBarButtonAdd = new ApplicationBarIconButton(new Uri("/Assets/Add.png",UriKind.RelativeOrAbsolute));
+            appBarButtonAdd.Click += appBarButtonAdd_Click;
+            appBarButtonAdd.Text = "Add";
+            ApplicationBar.Buttons.Add(appBarButtonAdd);
+
             ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem("settings");
             appBarMenuItem.Click += AppBarMenuItem_Click;
             ApplicationBar.MenuItems.Add(appBarMenuItem);
@@ -43,6 +46,11 @@ namespace Cortana_Quick
             ApplicationBarMenuItem appBarMenuItemReview = new ApplicationBarMenuItem("review and rate me!");
             appBarMenuItemReview.Click += appBarMenuItemReview_Click;
             ApplicationBar.MenuItems.Add(appBarMenuItemReview);
+        }
+
+        void appBarButtonAdd_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/NoteDetailPage.xaml?parameter=" + 0, UriKind.RelativeOrAbsolute));
         }
 
         void appBarMenuItemTutorial_Click(object sender, EventArgs e)

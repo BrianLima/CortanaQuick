@@ -7,12 +7,12 @@
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
-    Foreground="{StaticResource PhoneForegroundBrush}" d:DesignWidth="480" Height="240">
+    Foreground="{StaticResource PhoneForegroundBrush}" d:DesignWidth="480" Height="215">
 
-    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}" Height="240" VerticalAlignment="Top">
+    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}" Height="215" VerticalAlignment="Top">
         <TextBlock Margin="10,90,10,0" TextWrapping="Wrap" Text="{Binding Title}" VerticalAlignment="Top" Foreground="{StaticResource PhoneAccentBrush}" FontSize="36"/>
-        <TextBlock Margin="10,140,10,0" TextWrapping="Wrap" Text="{Binding Message}" VerticalAlignment="Top" Height="60" FontSize="24"/>
-        <TextBlock Margin="10,205,10,0" TextWrapping="Wrap" Text="{Binding Confirmation}" VerticalAlignment="Top" Height="30"/>
+        <TextBlock Margin="10,140,10,0" TextWrapping="Wrap" Text="{Binding Message}" VerticalAlignment="Top" Height="35" FontSize="24"/>
+        <TextBlock Margin="10,180,10,0" TextWrapping="Wrap" Text="{Binding Confirmation}" VerticalAlignment="Top" Height="30"/>
         <local:CortanaCircle HorizontalAlignment="Left" VerticalAlignment="Top" Height="85" Width="85" Margin="0,10,0,0"/>
     </Grid>
 </UserControl>

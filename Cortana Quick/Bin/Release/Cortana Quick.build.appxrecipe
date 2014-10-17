@@ -178,6 +178,9 @@
     <AppxPackagedFile Include="C:\Users\Brian\documents\visual studio 2013\Projects\CardCollector\packages\WPtoolkit.4.2013.08.16\lib\wp8\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll">
       <PackagePath>zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\add.png">
+      <PackagePath>Assets\add.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\AlignmentGrid.png">
       <PackagePath>Assets\AlignmentGrid.png</PackagePath>
     </AppxPackagedFile>

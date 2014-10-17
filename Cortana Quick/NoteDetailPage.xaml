@@ -55,8 +55,8 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,11,0">
-            <TextBox x:Name="BoxNoteDetail" Height="232" Margin="0,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-            <TextBlock x:Name="BlockNoteDate" HorizontalAlignment="Left" Margin="10,247,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="436"/>
+            <TextBox x:Name="BoxNoteDetail" Height="232" Margin="0,10,0,0" TextWrapping="Wrap" Text="{Binding note, Mode=TwoWay}" VerticalAlignment="Top"/>
+            <TextBlock x:Name="BlockNoteDate" HorizontalAlignment="Left" Margin="10,247,0,0" TextWrapping="Wrap" Text="{Binding date}" VerticalAlignment="Top" Width="436"/>
         </Grid>
     </Grid>
 
