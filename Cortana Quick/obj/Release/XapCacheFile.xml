@@ -1,6 +1,6 @@
-﻿<xapCache source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Release\Cortana_Quick_Release_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="17/10/2014 13:12:56">
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Release\resources.pri" archivePath="resources.pri" lastWriteTime="17/10/2014 13:07:47" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Release\Cortana Quick.dll" archivePath="Cortana Quick.dll" lastWriteTime="17/10/2014 13:12:53" />
+﻿<xapCache source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Release\Cortana_Quick_Release_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="17/10/2014 13:24:34">
+  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Release\resources.pri" archivePath="resources.pri" lastWriteTime="17/10/2014 13:24:31" />
+  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Release\Cortana Quick.dll" archivePath="Cortana Quick.dll" lastWriteTime="17/10/2014 13:24:30" />
   <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\add.png" archivePath="Assets\add.png" lastWriteTime="17/10/2014 13:01:24" />
   <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="26/07/2014 15:33:59" />
   <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\BadgeLogo.png" archivePath="Assets\BadgeLogo.png" lastWriteTime="02/10/2014 14:44:57" />
@@ -26,7 +26,7 @@
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.1\Libraries\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="18/04/2014 04:36:48" />
   <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CardCollector\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="05/04/2014 01:20:26" />
   <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\QuickDatabase\Bin\Release\QuickDatabase.dll" archivePath="QuickDatabase.dll" lastWriteTime="08/10/2014 21:27:26" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="11/10/2014 10:00:18" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Release\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="17/10/2014 13:12:55" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Release\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="17/10/2014 13:07:47" />
+  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="17/10/2014 13:24:33" />
+  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Release\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="17/10/2014 13:24:33" />
+  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Release\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="17/10/2014 13:24:31" />
 </xapCache>
