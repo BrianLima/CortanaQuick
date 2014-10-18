@@ -16,7 +16,7 @@ namespace Cortana_Quick
     public partial class MainPage : PhoneApplicationPage
     {  
         SpeechSynthesizer talk;
-        public static List<String> phrases = new List<String> {"are", "my","is", "on", "where", "i", "left", "does", "did", "put", "kept"};
+        public static List<String> phrases = new List<String> {"are", "my", "is", "on", "where", "what", "who", "i", "left", "does", "did", "put", "kept"};
         bool noting = false;
         Notes note;
 
@@ -120,6 +120,7 @@ namespace Cortana_Quick
 
         private void HandleAskCommands(string question)
         {
+            noting = false;
             question = question.Replace("?", String.Empty);
             string[] words = question.Split(' ');
             List<Notes> results = new List<Notes>();
@@ -129,8 +130,12 @@ namespace Cortana_Quick
             {
                 if (!phrases.Contains(words[i]))
                 {
-                    results.AddRange(note.GetSimilarNotes(words[i]));
+                    results.AddRange(note.GetSimilarNotes(" " + words[i] + " "));
                 }
+            }
+            foreach (Notes item in results)
+            {
+                
             }
 
             if (results.Count > 0)
@@ -268,7 +273,7 @@ namespace Cortana_Quick
             if (!noting)
             {
                 left = "Ok";
-                right = String.Empty;
+                right = "Cancel";
             }
             else
             {
