@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2014/deployment" AppPlatformVersion="8.1">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{bd0dec9a-2742-4bc7-bbe2-4f7f0de109c1}" Title="Quick for Cortana" RuntimeType="Silverlight" Version="2.2.0.0" Genre="apps.normal" Author="Brian Lima" Description="" SDOptOut="false" BackUpOptOut="false" Publisher="Briano" PublisherID="{10aad829-6964-480d-8a51-1dd372f097c9}" NotificationService="MPN">
+  <App xmlns="" ProductID="{bd0dec9a-2742-4bc7-bbe2-4f7f0de109c1}" Title="Quick for Cortana" RuntimeType="Silverlight" Version="2.2.0.1" Genre="apps.normal" Author="Brian Lima" Description="" SDOptOut="false" BackUpOptOut="false" Publisher="Briano" PublisherID="{10aad829-6964-480d-8a51-1dd372f097c9}" NotificationService="MPN">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
