@@ -33,7 +33,7 @@ namespace Cortana_Quick
             ApplicationBarIconButton appBarButtonAdd = new ApplicationBarIconButton(new Uri("/Assets/Add.png",UriKind.RelativeOrAbsolute));
             appBarButtonAdd.Click += appBarButtonAdd_Click;
             appBarButtonAdd.Text = "Add";
-            ApplicationBar.Buttons.Add(appBarButtonAdd);
+            //ApplicationBar.Buttons.Add(appBarButtonAdd);
 
             ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem("settings");
             appBarMenuItem.Click += AppBarMenuItem_Click;

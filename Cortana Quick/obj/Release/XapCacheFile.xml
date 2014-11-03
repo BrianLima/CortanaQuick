@@ -1,32 +1,38 @@
-﻿<xapCache source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Release\Cortana_Quick_Release_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="18/10/2014 09:04:01">
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Release\resources.pri" archivePath="resources.pri" lastWriteTime="18/10/2014 09:03:59" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Release\Cortana Quick.dll" archivePath="Cortana Quick.dll" lastWriteTime="18/10/2014 09:03:59" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\add.png" archivePath="Assets\add.png" lastWriteTime="17/10/2014 13:01:24" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="26/07/2014 15:33:59" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\BadgeLogo.png" archivePath="Assets\BadgeLogo.png" lastWriteTime="02/10/2014 14:44:57" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\check.png" archivePath="Assets\check.png" lastWriteTime="20/08/2014 17:17:53" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\close.png" archivePath="Assets\close.png" lastWriteTime="20/08/2014 17:17:53" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\CortanaCircle.png" archivePath="Assets\CortanaCircle.png" lastWriteTime="03/10/2014 18:50:23" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\Logo.png" archivePath="Assets\Logo.png" lastWriteTime="02/10/2014 14:46:24" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\quick.png" archivePath="Assets\quick.png" lastWriteTime="02/10/2014 15:00:47" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\SplashScreen.png" archivePath="Assets\SplashScreen.png" lastWriteTime="02/10/2014 14:47:13" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\SquareTile150x150.png" archivePath="Assets\SquareTile150x150.png" lastWriteTime="02/10/2014 14:49:02" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\SquareTile71x71.png" archivePath="Assets\SquareTile71x71.png" lastWriteTime="02/10/2014 14:47:56" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\StoreLogo.png" archivePath="Assets\StoreLogo.png" lastWriteTime="02/10/2014 14:49:42" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\WideLogo.png" archivePath="Assets\WideLogo.png" lastWriteTime="02/10/2014 14:50:25" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="17/10/2014 12:37:02" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="02/10/2014 14:56:27" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="02/10/2014 14:57:01" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="02/10/2014 14:57:31" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\SplashScreen.png" archivePath="SplashScreen.png" lastWriteTime="20/08/2014 18:04:47" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\VoiceDefinition.xml" archivePath="VoiceDefinition.xml" lastWriteTime="02/10/2014 20:55:53" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="08/10/2014 21:27:31" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Release\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="02/10/2014 14:41:06" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Release\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="17/10/2014 12:37:48" />
-  <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.1\Libraries\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="18/04/2014 04:36:48" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CardCollector\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="05/04/2014 01:20:26" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\QuickDatabase\Bin\Release\QuickDatabase.dll" archivePath="QuickDatabase.dll" lastWriteTime="08/10/2014 21:27:26" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="18/10/2014 09:04:01" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Release\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="18/10/2014 09:04:01" />
-  <file source="C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\Bin\Release\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="18/10/2014 09:04:00" />
+﻿<xapCache source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Cortana_Quick_Release_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="03/11/2014 19:20:43">
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\resources.pri" archivePath="resources.pri" lastWriteTime="03/11/2014 19:20:42" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\Cortana Quick.dll" archivePath="Cortana Quick.dll" lastWriteTime="03/11/2014 19:20:41" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\add.png" archivePath="Assets\add.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\BadgeLogo.png" archivePath="Assets\BadgeLogo.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\check.png" archivePath="Assets\check.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\close.png" archivePath="Assets\close.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\CortanaCircle.png" archivePath="Assets\CortanaCircle.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\Logo.png" archivePath="Assets\Logo.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\quick.png" archivePath="Assets\quick.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\SplashScreen.png" archivePath="Assets\SplashScreen.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\SquareTile150x150.png" archivePath="Assets\SquareTile150x150.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\SquareTile71x71.png" archivePath="Assets\SquareTile71x71.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\StoreLogo.png" archivePath="Assets\StoreLogo.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\WideLogo.png" archivePath="Assets\WideLogo.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\SplashScreen.png" archivePath="SplashScreen.png" lastWriteTime="29/10/2014 20:14:29" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\VoiceDefinition.xml" archivePath="VoiceDefinition.xml" lastWriteTime="29/10/2014 20:14:29" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="03/11/2014 19:19:46" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v8.1\Libraries\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="18/04/2014 03:36:48" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="29/10/2014 20:14:28" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\QuickDatabase\Bin\Release\QuickDatabase.dll" archivePath="QuickDatabase.dll" lastWriteTime="03/11/2014 19:19:44" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="29/10/2014 20:14:25" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="03/11/2014 19:19:46" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="03/11/2014 19:20:43" />
+  <file source="C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="03/11/2014 19:20:42" />
 </xapCache>

@@ -24,8 +24,9 @@
             <!--Panorama item 1-->
             <phone:PanoramaItem Header="hello">
                 <Grid>
-                    <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="Welcome to Quick, the first audible notes extension for Cortana. Here you can use Cortana to do quick audible notes! Let's go trough a fast how-to" VerticalAlignment="Top" Height="463"/>
-                    <Image HorizontalAlignment="Left" Height="233" Margin="93,145,0,0" VerticalAlignment="Top" Width="235" Source="/Assets/Quick.png"/>
+                    <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="Welcome to Quick, the first audible notes extension for Cortana. Here you can use Cortana to do quick audible notes! Let's go trough a fast how-to" VerticalAlignment="Top" Height="105"/>
+                    <Image HorizontalAlignment="Left" Height="233" Margin="93,135,0,0" VerticalAlignment="Top" Width="235" Source="/Assets/Quick.png"/>
+                    <Button Content="How do i enable Cortana?" Margin="10,401,10,0" VerticalAlignment="Top" Click="Button_Click"/>
                 </Grid>
             </phone:PanoramaItem>
 

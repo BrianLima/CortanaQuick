@@ -94,3 +94,48 @@ C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\
 C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Release\XapCacheFile.xml
 C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Release\CortanaCircle.g.cs
 C:\Users\Brian\documents\visual studio 2013\Projects\CortanaQuick\Cortana Quick\obj\Release\CortanaOverlay.g.cs
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Assets\ApplicationIcon.png
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Assets\Tiles\IconicTileSmall.png
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Cortana Quick.dll
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Cortana Quick.pdb
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\resources.pri
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\AppxManifest.xml
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Cortana Quick.build.appxrecipe
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Properties\WMAppManifest.xml
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\AppManifest.xaml
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Cortana_Quick_Release_AnyCPU.xap
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\Microsoft.Phone.Controls.dll
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\QuickDatabase.dll
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Bin\Release\QuickDatabase.pdb
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\Cortana Quick.csprojResolveAssemblyReference.cache
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\App.g.cs
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\CortanaCircle.g.cs
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\CortanaOverlay.g.cs
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\MainPage.g.cs
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\NoteControl.g.cs
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\NoteDetailPage.g.cs
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\SettingsPage.g.cs
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\TutorialPage.g.cs
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\Cortana Quick.g.resources
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\Cortana_Quick.Resources.AppResources.resources
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\Cortana Quick.csproj.GenerateResource.Cache
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\Cortana Quick.dll
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\Cortana Quick.pdb
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\priconfig.xml
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\priconfig.xml.intermediate
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\layout.resfiles
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\layout.resfiles.intermediate
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\resources.resfiles
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\resources.resfiles.intermediate
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\pri.resfiles
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\pri.resfiles.intermediate
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\qualifiers.txt
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\qualifiers.txt.intermediate
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\ProjectArchitectures.txt
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\MDILProjectFiles.xml
+C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\obj\Release\XapCacheFile.xml

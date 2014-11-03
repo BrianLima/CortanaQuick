@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Navigation;
+﻿using System.Windows;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
+using Microsoft.Phone.Tasks;
 
 namespace Cortana_Quick
 {
@@ -15,6 +9,13 @@ namespace Cortana_Quick
         public TutorialPage()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            WebBrowserTask task = new WebBrowserTask();
+            task.Uri = new System.Uri("http://www.windowscentral.com/want-cortana-outside-us-heres-how", System.UriKind.RelativeOrAbsolute);
+            task.Show();
         }
     }
 }
