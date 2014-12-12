@@ -1,2 +1,0 @@
-C:\Users\Brian\Documents\Projects\CortanaQuick\Cortana Quick\Cortana Quick.csproj;neutral
-C:\Users\Brian\Documents\Projects\CortanaQuick\QuickDatabase\QuickDatabase.csproj;neutral
