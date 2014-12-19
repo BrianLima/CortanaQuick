@@ -11,10 +11,10 @@ namespace Cortana_Quick
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             WebBrowserTask task = new WebBrowserTask();
-            task.Uri = new System.Uri("http://www.windowscentral.com/want-cortana-outside-us-heres-how", System.UriKind.RelativeOrAbsolute);
+            task.Uri = new System.Uri("http://www.windowsphone.com/en-us/how-to/wp8/cortana/start-using-cortana", System.UriKind.RelativeOrAbsolute);
             task.Show();
         }
     }
