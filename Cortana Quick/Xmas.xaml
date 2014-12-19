@@ -1,0 +1,28 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:es="clr-namespace:Microsoft.Expression.Shapes;assembly=Microsoft.Expression.Drawing" x:Class="Cortana_Quick.Xmas"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}" Width="55" Height="50">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+
+        <es:RegularPolygon Fill="#FFBB0B0B" HorizontalAlignment="Left" Height="39.246" InnerRadius="1" Margin="5.098,-6.162,0,0" PointCount="3" Stretch="Fill" Stroke="Black" StrokeThickness="0" UseLayoutRounding="False" VerticalAlignment="Top" Width="41.822" RenderTransformOrigin="0.5,0.5">
+            <es:RegularPolygon.RenderTransform>
+                <CompositeTransform Rotation="-35.674" TranslateX="-3.68" TranslateY="4.957" SkewX="-3.662"/>
+            </es:RegularPolygon.RenderTransform>
+        </es:RegularPolygon>
+
+        <es:Arc ArcThickness="9" ArcThicknessUnit="Pixel" EndAngle="3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="53.175" Stretch="None" Stroke="Black" StartAngle="-75" UseLayoutRounding="False" VerticalAlignment="Top" Width="80.056" StrokeThickness="0" Margin="8.972,18.6,0,0" RenderTransformOrigin="0.5,0.5">
+            <es:Arc.RenderTransform>
+                <CompositeTransform SkewX="0.204" TranslateX="7.189" Rotation="-18.434" TranslateY="2.597" SkewY="7.398"/>
+            </es:Arc.RenderTransform>
+        </es:Arc>
+        <Ellipse Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="6" Margin="10,0,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="6"/>
+
+    </Grid>
+</UserControl>

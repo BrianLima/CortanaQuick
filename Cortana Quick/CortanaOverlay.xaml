@@ -14,5 +14,10 @@
         <TextBlock Margin="10,140,10,0" TextWrapping="Wrap" Text="{Binding Message}" VerticalAlignment="Top" Height="35" FontSize="24"/>
         <TextBlock Margin="10,180,10,0" TextWrapping="Wrap" Text="{Binding Confirmation}" VerticalAlignment="Top" Height="30"/>
         <local:CortanaCircle HorizontalAlignment="Left" VerticalAlignment="Top" Height="85" Width="85" Margin="0,10,0,0"/>
+        <local:Xmas HorizontalAlignment="Left" Margin="-7,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <local:Xmas.RenderTransform>
+                <CompositeTransform Rotation="-3.677"/>
+            </local:Xmas.RenderTransform>
+        </local:Xmas>
     </Grid>
 </UserControl>
