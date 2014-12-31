@@ -22,62 +22,45 @@
         <phone:Panorama Title="quick for cortana" Grid.ColumnSpan="2">
 
             <!--Panorama item 1-->
-            <phone:PanoramaItem Header="hello">
+            <phone:PanoramaItem Header="{Binding Path=LocalizedResources.Tutorial1_Header, Source={StaticResource LocalizedStrings}}" >
                 <Grid>
-                    <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="Welcome to Quick, the first audible notes extension for Cortana. Here you can use Cortana to do quick audible notes! Let's go trough a fast how-to" VerticalAlignment="Top" Height="105"/>
+                    <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Tutorial1, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Height="169"/>
                     <Image HorizontalAlignment="Left" Height="233" Margin="93,184,0,0" VerticalAlignment="Top" Width="235" Source="/Assets/Quick.png"/>
                 </Grid>
             </phone:PanoramaItem>
 
             <!--Panorama item 2-->
-            <phone:PanoramaItem Header="taking a note">
+            <phone:PanoramaItem Header="{Binding Path=LocalizedResources.Tutorial2_Header, Source={StaticResource LocalizedStrings}}">
                 <Grid>
-                    <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="Open Cortana by pressing the search button, or touching her live tile or, if your Windows Phone is updated with the Lumia Denim update, just say 'Hey Cortana'." VerticalAlignment="Top" Height="109"/>
-                    <TextBlock Margin="10,124,10,0" TextWrapping="Wrap" Text="Now, say to her Quick + I + something you want to be remembered later:" VerticalAlignment="Top" Height="54"/>
-                    <TextBlock Margin="10,200,10,0" TextWrapping="Wrap" Text="Quick I Parked my car at sesame street" VerticalAlignment="Top" Height="54" FontWeight="Bold" TextAlignment="Center"/>
-                    <TextBlock Margin="10,232,10,0" TextWrapping="Wrap" Text="Quick I left my keys on my room" VerticalAlignment="Top" Height="54" FontWeight="Bold" TextAlignment="Center"/>
-                    <TextBlock Margin="10,264,10,0" TextWrapping="Wrap" Text="Quick I put my torch on the dining table" VerticalAlignment="Top" Height="54" FontWeight="Bold" TextAlignment="Center"/>
-                    <TextBlock Margin="10,296,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="54" FontWeight="Bold" TextAlignment="Center">
-                    	<Run Text="Quick "/>
-                    	<Run Text="I kept my .net book in the "/>
-                    	<Run Text="my "/>
-                    	<Run Text="bag"/>
-                    </TextBlock>
+                    <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Tutorial2, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Height="109"/>
+                    <TextBlock Margin="10,124,10,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Tutorial2_1, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Height="54"/>
+                    <TextBlock Margin="10,200,10,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Tutorial2_2, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Height="54" FontWeight="Bold" TextAlignment="Center"/>
+                    <TextBlock Margin="10,232,10,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Tutorial2_3, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Height="54" FontWeight="Bold" TextAlignment="Center"/>
+                    <TextBlock Margin="10,264,10,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Tutorial2_4, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Height="54" FontWeight="Bold" TextAlignment="Center"/>
+                    <TextBlock Margin="10,296,10,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Tutorial2_5, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Height="54" FontWeight="Bold" TextAlignment="Center"/>
                 </Grid>
             </phone:PanoramaItem>
 
             <!--Panorama item 3-->
-            <phone:PanoramaItem Header="asking for a note">
+            <phone:PanoramaItem Header="{Binding Path=LocalizedResources.Tutorial3_Header, Source={StaticResource LocalizedStrings}}">
                 <Grid>
-                    <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="Later, when you want to know something that you noted, open Cortana one more time and say to her:" VerticalAlignment="Top" Height="91"/>
-                    <TextBlock Margin="10,106,10,0" TextWrapping="Wrap" Text="Quick where is my car?" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center"/>
-                    <TextBlock Margin="10,213,10,0" TextWrapping="Wrap" Text="Then, she will answear you with:" VerticalAlignment="Top" Height="30"/>
-                    <TextBlock Margin="10,248,10,0" TextWrapping="Wrap" Text="Your car is at sesame street" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center"/>
-                    <TextBlock Margin="10,348,10,0" TextWrapping="Wrap" Text="Now you are good to go! If you have any suggestions to improve this app, review it, i'll be glad to hear your opinion. Thanks!" VerticalAlignment="Top" Height="90" TextAlignment="Left"/>
-                    <TextBlock Margin="10,136,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center">
-                    	<Run Text="Quick where did i left my keys"/>
-                    	<Run Text="?"/>
-                    </TextBlock>
-                    <TextBlock Margin="10,168,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center" Text="Quick where did i put my torch?"/>
-                    <TextBlock Margin="10,274,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center">
-                    	<Run Text="You"/>
-                    	<Run Text=" left  your "/>
-                    	<Run Text="keys at your room"/>
-                    </TextBlock>
-                    <TextBlock Margin="10,303,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center">
-                    	<Run Text="Your "/>
-                    	<Run Text="torch "/>
-                    	<Run Text="is "/>
-                    	<Run Text="on the dinning table"/>
-                    </TextBlock>
+                    <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Tutorial3, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Height="91"/>
+                    <TextBlock Margin="10,106,10,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Tutorial3_1, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center"/>
+                    <TextBlock Margin="10,213,10,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Tutorial3_2, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Height="30"/>
+                    <TextBlock Margin="10,248,10,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Tutorial3_3, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center"/>
+                    <TextBlock Margin="10,348,10,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Tutorial3_4, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Height="90" TextAlignment="Left"/>
+                    <TextBlock Margin="10,136,10,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Tutorial3_5, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center"/>
+                    <TextBlock Margin="10,168,10,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Tutorial3_6, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center"/>
+                    <TextBlock Margin="10,274,10,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Tutorial3_7, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center"/>
+                    <TextBlock Margin="10,303,10,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Tutorial3_8, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Height="40" FontWeight="Bold" TextAlignment="Center"/>
                 </Grid>
             </phone:PanoramaItem>
 
             <!--Panorama item 3-->
-            <phone:PanoramaItem Header="where is she?">
+            <phone:PanoramaItem Header="{Binding Path=LocalizedResources.Tutorial4_Header, Source={StaticResource LocalizedStrings}}">
                 <Grid>
-                    <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="If you don't know where Cortana is and your country native language is English, follow this guide to enable Cortana on your Windows Phone, If you live in Germany, Spain and others, wait a little bit, this app will support your language soon." VerticalAlignment="Top" Height="163"/>
-                    <Button Content="How do i enable Cortana?" Margin="10,178,10,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+                    <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.Tutorial4, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Height="163"/>
+                    <Button Content="{Binding Path=LocalizedResources.Tutorial4_Button, Source={StaticResource LocalizedStrings}}" Margin="10,178,10,0" VerticalAlignment="Top" Click="Button_Click_1"/>
                 </Grid>
             </phone:PanoramaItem>
         </phone:Panorama>
