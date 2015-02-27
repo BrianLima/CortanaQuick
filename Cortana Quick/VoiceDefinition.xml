@@ -4,7 +4,7 @@
 <VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.1">
   <!-- The CommandSet Name is used to programmatically access the CommandSet -->
 
-  <CommandSet xml:lang="en-us" Name="englishQuickCortana">
+  <CommandSet xml:lang="en-us" Name="usQuickCortana">
     <!-- The CommandPrefix provides an alternative to your full app name for invocation -->
     <!-- Do me a favour and choose something else for your app name :) -->
     <CommandPrefix>Quick</CommandPrefix>
@@ -42,5 +42,122 @@
     </PhraseTopic>
 
   </CommandSet>
+  
+  <CommandSet xml:lang="en-gb" Name="gbQuickCortana">
+      <!-- The CommandPrefix provides an alternative to your full app name for invocation -->
+      <!-- Do me a favour and choose something else for your app name :) -->
+      <CommandPrefix>Quick</CommandPrefix>
+
+      <!-- The CommandSet Example appears in the global help alongside your app name -->
+      <Example>Left my car at sesame street</Example>
+
+      <Command Name="NoteCommands">
+        <Example> Left my car at sesame street </Example>
+        <ListenFor> i {NoteKeyWords} </ListenFor>
+        <Feedback> Noting this... </Feedback>
+        <Navigate Target="MainPage.xaml" />
+      </Command>
+
+      <Command Name="AskCommands">
+        <Example> Where is my car </Example>
+        <ListenFor> {AskKeyWords} </ListenFor>
+        <Feedback> Checking this information... </Feedback>
+        <Navigate Target="MainPage.xaml" />
+      </Command>
+    
+      <PhraseTopic Label="NoteKeyWords" Scenario="Natural Language">
+        <Subject>left</Subject>
+        <Subject>parked</Subject>
+        <Subject>put</Subject>
+        <Subject>kept</Subject>
+      </PhraseTopic>
+
+      <PhraseTopic Label="AskKeyWords" Scenario="Natural Language">
+        <Subject>where</Subject>
+        <Subject>did</Subject>
+        <Subject>does</Subject>
+        <Subject>what</Subject>
+        <Subject>who</Subject>
+      </PhraseTopic>
+
+    </CommandSet>
+  
+  <CommandSet xml:lang="en-ca" Name="caQuickCortana">
+      <!-- The CommandPrefix provides an alternative to your full app name for invocation -->
+      <!-- Do me a favour and choose something else for your app name :) -->
+      <CommandPrefix>Quick</CommandPrefix>
+
+      <!-- The CommandSet Example appears in the global help alongside your app name -->
+      <Example>Left my car at sesame street</Example>
+
+      <Command Name="NoteCommands">
+        <Example> Left my car at sesame street </Example>
+        <ListenFor> i {NoteKeyWords} </ListenFor>
+        <Feedback> Noting this... </Feedback>
+        <Navigate Target="MainPage.xaml" />
+      </Command>
+
+      <Command Name="AskCommands">
+        <Example> Where is my car </Example>
+        <ListenFor> {AskKeyWords} </ListenFor>
+        <Feedback> Checking this information... </Feedback>
+        <Navigate Target="MainPage.xaml" />
+      </Command>
+    
+      <PhraseTopic Label="NoteKeyWords" Scenario="Natural Language">
+        <Subject>left</Subject>
+        <Subject>parked</Subject>
+        <Subject>put</Subject>
+        <Subject>kept</Subject>
+      </PhraseTopic>
+
+      <PhraseTopic Label="AskKeyWords" Scenario="Natural Language">
+        <Subject>where</Subject>
+        <Subject>did</Subject>
+        <Subject>does</Subject>
+        <Subject>what</Subject>
+        <Subject>who</Subject>
+      </PhraseTopic>
+
+    </CommandSet>
+  
+  <CommandSet xml:lang="en-in" Name="inQuickCortana">
+      <!-- The CommandPrefix provides an alternative to your full app name for invocation -->
+      <!-- Do me a favour and choose something else for your app name :) -->
+      <CommandPrefix>Quick</CommandPrefix>
+
+      <!-- The CommandSet Example appears in the global help alongside your app name -->
+      <Example>Left my car at sesame street</Example>
+
+      <Command Name="NoteCommands">
+        <Example> Left my car at sesame street </Example>
+        <ListenFor> i {NoteKeyWords} </ListenFor>
+        <Feedback> Noting this... </Feedback>
+        <Navigate Target="MainPage.xaml" />
+      </Command>
+
+      <Command Name="AskCommands">
+        <Example> Where is my car </Example>
+        <ListenFor> {AskKeyWords} </ListenFor>
+        <Feedback> Checking this information... </Feedback>
+        <Navigate Target="MainPage.xaml" />
+      </Command>
+    
+      <PhraseTopic Label="NoteKeyWords" Scenario="Natural Language">
+        <Subject>left</Subject>
+        <Subject>parked</Subject>
+        <Subject>put</Subject>
+        <Subject>kept</Subject>
+      </PhraseTopic>
+
+      <PhraseTopic Label="AskKeyWords" Scenario="Natural Language">
+        <Subject>where</Subject>
+        <Subject>did</Subject>
+        <Subject>does</Subject>
+        <Subject>what</Subject>
+        <Subject>who</Subject>
+      </PhraseTopic>
+
+    </CommandSet>
 
 </VoiceCommands>

@@ -5,8 +5,10 @@
     <Language code="en-CA" />
     <Language code="en-IN" />
     <Language code="en-GB" />
+    <Language code="en-AU" />
+    <Language code="en-US" />
   </Languages>
-  <App xmlns="" ProductID="{bd0dec9a-2742-4bc7-bbe2-4f7f0de109c1}" Title="Quick for Cortana" RuntimeType="Silverlight" Version="2.3.0.4" Genre="apps.normal" Author="Brian Lima" Description="" SDOptOut="false" BackUpOptOut="false" Publisher="Briano" PublisherID="{10aad829-6964-480d-8a51-1dd372f097c9}" NotificationService="MPN">
+  <App xmlns="" ProductID="{bd0dec9a-2742-4bc7-bbe2-4f7f0de109c1}" Title="Quick for Cortana" RuntimeType="Silverlight" Version="2.3.0.6" Genre="apps.normal" Author="Brian Lima" Description="" SDOptOut="false" BackUpOptOut="false" Publisher="Briano" PublisherID="{10aad829-6964-480d-8a51-1dd372f097c9}" NotificationService="MPN">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />

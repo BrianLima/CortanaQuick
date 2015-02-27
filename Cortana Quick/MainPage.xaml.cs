@@ -30,11 +30,6 @@ namespace Cortana_Quick
         {
             ApplicationBar = new ApplicationBar();
 
-            ApplicationBarIconButton appBarButtonAdd = new ApplicationBarIconButton(new Uri("/Assets/Add.png",UriKind.RelativeOrAbsolute));
-            appBarButtonAdd.Click += appBarButtonAdd_Click;
-            appBarButtonAdd.Text = "Add";
-            //ApplicationBar.Buttons.Add(appBarButtonAdd);
-
             ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem("settings");
             appBarMenuItem.Click += AppBarMenuItem_Click;
             ApplicationBar.MenuItems.Add(appBarMenuItem);
@@ -46,6 +41,28 @@ namespace Cortana_Quick
             ApplicationBarMenuItem appBarMenuItemReview = new ApplicationBarMenuItem("review and rate me!");
             appBarMenuItemReview.Click += appBarMenuItemReview_Click;
             ApplicationBar.MenuItems.Add(appBarMenuItemReview);
+
+#if DEBUG
+            ApplicationBarIconButton testNoting = new ApplicationBarIconButton(new Uri("/Assets/Tiles/add.png", UriKind.Relative));
+            testNoting.Text = "Test Noting";
+            testNoting.Click += testNoting_Click;
+            ApplicationBar.Buttons.Add(testNoting);
+
+            ApplicationBarIconButton testQuestion = new ApplicationBarIconButton(new Uri("/Assets/Tiles/add.png", UriKind.Relative));
+            testQuestion.Text = "Test Question";
+            testQuestion.Click += testQuestion_Click;
+            ApplicationBar.Buttons.Add(testQuestion);
+#endif
+        }
+
+        void testQuestion_Click(object sender, EventArgs e)
+        {
+            HandleAskCommands("When am i going to work?");
+        }
+
+        void testNoting_Click(object sender, EventArgs e)
+        {
+            HandleNoteCommands("Parked my car here");
         }
 
         void appBarButtonAdd_Click(object sender, EventArgs e)
@@ -133,10 +150,6 @@ namespace Cortana_Quick
                     results.AddRange(note.GetSimilarNotes(" " + words[i] + " "));
                 }
             }
-            foreach (Notes item in results)
-            {
-                
-            }
 
             if (results.Count > 0)
             {
@@ -144,6 +157,7 @@ namespace Cortana_Quick
                 Notes mostFrequent = results.GroupBy(id => id).OrderByDescending(g => g.Count()).Take(1).Select(g => g.Key).First();
                 mostFrequent.note = mostFrequent.note.Replace("my ", "your ");
                 mostFrequent.note = mostFrequent.note.Replace("i ", "You ");
+                mostFrequent.note = mostFrequent.note.Replace("I am ", "You are");
                 if (mostFrequent != null || !String.IsNullOrEmpty(mostFrequent.note))
                 {
                     if (!mostFrequent.note.StartsWith("You"))
@@ -177,6 +191,7 @@ namespace Cortana_Quick
         private void HandleNoteCommands(string text)
         {
             noting = true;
+            text = "I " + text;
             bool verify = StorageHelper.GetSetting("VERIFY_INPUT", true);
             CortanaOverlay("I heard you say:", text, "Should i note it?");
             if (verify)

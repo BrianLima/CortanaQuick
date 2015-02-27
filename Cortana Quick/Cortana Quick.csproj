@@ -15,7 +15,7 @@
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
     <SilverlightApplication>true</SilverlightApplication>
-    <SupportedCultures>en-CA%3ben-IN%3ben-GB</SupportedCultures>
+    <SupportedCultures>en-CA%3ben-IN%3ben-GB%3ben-AU</SupportedCultures>
     <XapOutputs>true</XapOutputs>
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
     <XapFilename>Cortana_Quick_$(Configuration)_$(Platform).xap</XapFilename>
@@ -210,9 +210,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SplashScreen.png" />
-    <Content Include="VoiceDefinition.xml" />
+    <Content Include="VoiceDefinition.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.en-AU.resx" />
     <EmbeddedResource Include="Resources\AppResources.en-CA.resx" />
     <EmbeddedResource Include="Resources\AppResources.en-GB.resx" />
     <EmbeddedResource Include="Resources\AppResources.en-IN.resx" />
