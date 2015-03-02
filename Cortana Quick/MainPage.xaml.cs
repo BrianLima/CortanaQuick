@@ -191,14 +191,19 @@ namespace Cortana_Quick
         private void HandleNoteCommands(string text)
         {
             noting = true;
-            text = "I " + text;
+            
+            note = new Notes();
+            note.date = DateTime.Now;
+            note.note = "I " + text;
             bool verify = StorageHelper.GetSetting("VERIFY_INPUT", true);
-            CortanaOverlay("I heard you say:", text, "Should i note it?");
             if (verify)
             {
-                note = new Notes();
-                note.date = DateTime.Now;
-                note.note = text;
+                CortanaOverlay("I heard you say:", note.note, "Should i note it?");
+            }
+            else
+            {
+                note.Save();
+                NotesList.ItemsSource = note.GetAllNotes();
             }
         }
 
