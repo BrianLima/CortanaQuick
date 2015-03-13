@@ -197,6 +197,9 @@
     <Content Include="Assets\Repeat.png" />
     <Content Include="Assets\Logo.png" />
     <Content Include="Assets\quick.png" />
+    <Content Include="Assets\Sounds\droid.wav" />
+    <Content Include="Assets\Sounds\livelong.wav" />
+    <Content Include="Assets\Sounds\Sandvich.wav" />
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\SquareTile150x150.png" />
     <Content Include="Assets\SquareTile71x71.png" />
@@ -246,6 +249,7 @@
       <HintPath>..\..\CardCollector\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

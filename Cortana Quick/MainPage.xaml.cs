@@ -1,6 +1,8 @@
 ﻿using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using QuickDatabase;
 using System;
 using System.Collections.Generic;
@@ -14,9 +16,9 @@ using Windows.Phone.Speech.VoiceCommands;
 namespace Cortana_Quick
 {
     public partial class MainPage : PhoneApplicationPage
-    {  
+    {
         SpeechSynthesizer talk;
-        public static List<String> phrases = new List<String> {"are", "my", "is", "on", "where", "what", "who", "i", "left", "does", "did", "put", "kept"};
+        public static List<String> phrases = new List<String> { "are", "my", "is", "on", "where", "what", "who", "i", "left", "does", "did", "put", "kept" };
         bool noting = false;
         Notes note;
 
@@ -62,7 +64,7 @@ namespace Cortana_Quick
 
         void testNoting_Click(object sender, EventArgs e)
         {
-            HandleNoteCommands("Parked my car here");
+            HandleNoteCommands("I have to make food");
         }
 
         void appBarButtonAdd_Click(object sender, EventArgs e)
@@ -91,7 +93,7 @@ namespace Cortana_Quick
         /// </summary>
         /// <param name="e"></param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
-        {    
+        {
             base.OnNavigatedTo(e);
 
             if (e.NavigationMode == NavigationMode.New)
@@ -106,12 +108,12 @@ namespace Cortana_Quick
                     Task.Run(() => InstallVoiceCommands());
                 }
             }
-            
+
             bool delete = StorageHelper.GetSetting("AUTO_DELETE", false);
             int days = StorageHelper.GetSetting("MAXIMUM_DATE", 1);
-            
+
             Notes notes = new Notes();
-            notes.DestroyOldNotes(days, delete);           
+            notes.DestroyOldNotes(days, delete);
             NotesList.ItemsSource = notes.GetAllNotes();
         }
 
@@ -191,7 +193,7 @@ namespace Cortana_Quick
         private void HandleNoteCommands(string text)
         {
             noting = true;
-            
+
             note = new Notes();
             note.date = DateTime.Now;
             note.note = "I " + text;
@@ -271,7 +273,7 @@ namespace Cortana_Quick
                 BackgroundImage = new Uri("/Assets/ApplicationIcon.png", UriKind.Relative),
                 Title = "Quick for Cortana"
             };
-           tile.Update(standardData);
+            tile.Update(standardData);
         }
 
         private void LayoutRoot_Loaded(object sender, RoutedEventArgs e)
@@ -317,6 +319,7 @@ namespace Cortana_Quick
 
         void CortanaOverlay_Dismissing(object sender, DismissingEventArgs e)
         {
+            easterEgg(note.note);
             if (noting)
             {
                 switch (e.Result)
@@ -331,7 +334,7 @@ namespace Cortana_Quick
                         break;
                     default:
                         break;
-                }  
+                }
                 NotesList.ItemsSource = note.GetAllNotes();
             }
             noting = false;
@@ -349,6 +352,33 @@ namespace Cortana_Quick
             {
                 MessageBox.Show("Error when trying to use Text to speech", "Error", MessageBoxButton.OK);
                 talk.Dispose();
+            }
+        }
+
+        private void easterEgg(string phrase)
+        {
+            phrase = phrase.ToLower();
+            if (phrase.Contains("food") || phrase.Contains("sandwich") || phrase.Contains("lunch"))
+            {
+                PlaySound("Assets/Sounds/Sandvich.wav");
+            }
+            else if (phrase.Contains("star wars") || phrase.Contains("pew") || phrase.Contains("droid"))
+            {
+                PlaySound("Assets/Sounds/droid.wav");
+            }
+            else if (phrase.Contains("star trek") || phrase.Contains("spock"))
+            {
+                PlaySound("Assets/Sounds/livelong.wav");
+            }
+        }
+
+        public void PlaySound(string soundFile)
+        {
+            using (var stream = TitleContainer.OpenStream(soundFile))
+            {
+                var effect = SoundEffect.FromStream(stream);
+                FrameworkDispatcher.Update();
+                effect.Play();
             }
         }
     }
