@@ -1,0 +1,55 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Cortana_Quick.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="quick for cortana"  Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="about" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock Margin="10,284,17,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Developed by me as a test for Cortana possibilities, i'll keep basic functions in this app free, if you have any problem with the app it self, email or tweet me, i'll do my best to help you. If you want to support me, download my other apps or buy Repeat for Cortana. Thanks for your support!"/>
+            <Button Content="tweet" Margin="10,475,348,0" RenderTransformOrigin="0.462,0.557" Click="Button_Click" Height="98" VerticalAlignment="Top">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="/Assets/twitter.png"/>
+                </Button.Background>
+                <Button.Foreground>
+                    <ImageBrush Stretch="Fill"/>
+                </Button.Foreground>
+            </Button>
+            <TextBlock Margin="157,10,160,0" TextWrapping="Wrap" Text="@Brianostorm" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Image x:Name ="avatar" Height="242" Margin="107,42,97,0" VerticalAlignment="Top"/>
+            <Button Content="Mail-me" HorizontalAlignment="Left" Margin="160,488,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+            <Button Content="" Margin="348,470,10,0" RenderTransformOrigin="0.462,0.557" Click="Button_Click_2" Height="98" VerticalAlignment="Top">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="/Assets/Repeat.png"/>
+                </Button.Background>
+                <Button.Foreground>
+                    <ImageBrush Stretch="Fill"/>
+                </Button.Foreground>
+            </Button>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
