@@ -151,4 +151,73 @@
   <data name="Database_Version" xml:space="preserve">
     <value>1.0</value>
   </data>
+  <data name="Tutorial1" xml:space="preserve">
+    <value>Welcome to Quick, the first audible notes extension for Cortana. Here you can use Cortana to do quick audible notes! Let's go trough a fast how-to</value>
+  </data>
+  <data name="Tutorial1_Header" xml:space="preserve">
+    <value>hello</value>
+  </data>
+  <data name="Tutorial2" xml:space="preserve">
+    <value>Open Cortana by pressing the search button, or touching her live tile or, if your Windows Phone is updated with the Lumia Denim update, just say 'Hey Cortana'.</value>
+  </data>
+  <data name="Tutorial2_1" xml:space="preserve">
+    <value>Now, say to her Quick + I + something you want to be remembered later:"</value>
+  </data>
+  <data name="Tutorial2_2" xml:space="preserve">
+    <value>Quick Note Parked my car at sesame street</value>
+  </data>
+  <data name="Tutorial2_3" xml:space="preserve">
+    <value>Quick Note left my keys on my room</value>
+  </data>
+  <data name="Tutorial2_4" xml:space="preserve">
+    <value>Quick Note put my torch on the dining table</value>
+  </data>
+  <data name="Tutorial2_5" xml:space="preserve">
+    <value>Quick Note kept my .net book in the my bag</value>
+  </data>
+  <data name="Tutorial2_Header" xml:space="preserve">
+    <value>taking a note</value>
+  </data>
+  <data name="Tutorial3" xml:space="preserve">
+    <value>Later, when you want to know something that you noted, open Cortana one more time and say to her:"</value>
+  </data>
+  <data name="Tutorial3_1" xml:space="preserve">
+    <value>Quick where is my car?</value>
+  </data>
+  <data name="Tutorial3_2" xml:space="preserve">
+    <value>Then, she will answear you with:</value>
+  </data>
+  <data name="Tutorial3_3" xml:space="preserve">
+    <value>Your car is at sesame street</value>
+  </data>
+  <data name="Tutorial3_4" xml:space="preserve">
+    <value>Now you are good to go! If you have any suggestions to improve this app, review it, i'll be glad to hear your opinion. Thanks!</value>
+  </data>
+  <data name="Tutorial3_5" xml:space="preserve">
+    <value>Quick where did i left my keys?</value>
+  </data>
+  <data name="Tutorial3_6" xml:space="preserve">
+    <value>Quick where did i put my torch?</value>
+  </data>
+  <data name="Tutorial3_7" xml:space="preserve">
+    <value>You left  your keys at your room</value>
+  </data>
+  <data name="Tutorial3_8" xml:space="preserve">
+    <value>Your torch is on the dinning table</value>
+  </data>
+  <data name="Tutorial3_Header" xml:space="preserve">
+    <value>asking for a note</value>
+  </data>
+  <data name="Tutorial4" xml:space="preserve">
+    <value>If you don't know where Cortana is and your country native language is English, follow this guide to enable Cortana on your Windows Phone, If you live in Germany, Spain and others, wait a little bit, this app will support your language soon.</value>
+  </data>
+  <data name="Tutorial4_Button" xml:space="preserve">
+    <value>How do i enable Cortana?</value>
+  </data>
+  <data name="Tutorial4_Header" xml:space="preserve">
+    <value>where is she?</value>
+  </data>
+  <data name="Verify_Input1" xml:space="preserve">
+    <value>true</value>
+  </data>
 </root>

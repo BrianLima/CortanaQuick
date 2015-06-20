@@ -178,7 +178,7 @@ namespace Cortana_Quick.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quick I Parked my car at sesame street.
+        ///   Looks up a localized string similar to Quick Note Parked my car at sesame street.
         /// </summary>
         public static string Tutorial2_2 {
             get {
@@ -187,7 +187,7 @@ namespace Cortana_Quick.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quick I left my keys on my room.
+        ///   Looks up a localized string similar to Quick Note left my keys on my room.
         /// </summary>
         public static string Tutorial2_3 {
             get {
@@ -196,7 +196,7 @@ namespace Cortana_Quick.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quick I put my torch on the dining table.
+        ///   Looks up a localized string similar to Quick Note put my torch on the dining table.
         /// </summary>
         public static string Tutorial2_4 {
             get {
@@ -205,7 +205,7 @@ namespace Cortana_Quick.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quick I kept my .net book in the my bag.
+        ///   Looks up a localized string similar to Quick Note kept my .net book in the my bag.
         /// </summary>
         public static string Tutorial2_5 {
             get {

@@ -39,6 +39,10 @@ namespace Cortana_Quick
             ApplicationBarMenuItem appBarMenuItemTutorial = new ApplicationBarMenuItem("tutorial");
             appBarMenuItemTutorial.Click += appBarMenuItemTutorial_Click;
             ApplicationBar.MenuItems.Add(appBarMenuItemTutorial);
+            
+            ApplicationBarMenuItem appBarMenuItemAbout = new ApplicationBarMenuItem("About");
+            appBarMenuItemAbout.Click += appBarMenuItemAbout_Click;
+            ApplicationBar.MenuItems.Add(appBarMenuItemAbout);
 
             ApplicationBarMenuItem appBarMenuItemReview = new ApplicationBarMenuItem("review and rate me!");
             appBarMenuItemReview.Click += appBarMenuItemReview_Click;
@@ -55,6 +59,11 @@ namespace Cortana_Quick
             testQuestion.Click += testQuestion_Click;
             ApplicationBar.Buttons.Add(testQuestion);
 #endif
+        }
+
+        void appBarMenuItemAbout_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/AboutPage.xaml", UriKind.RelativeOrAbsolute));
         }
 
         void testQuestion_Click(object sender, EventArgs e)
@@ -196,7 +205,7 @@ namespace Cortana_Quick
 
             note = new Notes();
             note.date = DateTime.Now;
-            note.note = "I " + text;
+            note.note = text;
             bool verify = StorageHelper.GetSetting("VERIFY_INPUT", true);
             if (verify)
             {
@@ -319,7 +328,6 @@ namespace Cortana_Quick
 
         void CortanaOverlay_Dismissing(object sender, DismissingEventArgs e)
         {
-            easterEgg(note.note);
             if (noting)
             {
                 switch (e.Result)
@@ -352,23 +360,6 @@ namespace Cortana_Quick
             {
                 MessageBox.Show("Error when trying to use Text to speech", "Error", MessageBoxButton.OK);
                 talk.Dispose();
-            }
-        }
-
-        private void easterEgg(string phrase)
-        {
-            phrase = phrase.ToLower();
-            if (phrase.Contains("food") || phrase.Contains("sandwich") || phrase.Contains("lunch"))
-            {
-                PlaySound("Assets/Sounds/Sandvich.wav");
-            }
-            else if (phrase.Contains("star wars") || phrase.Contains("pew") || phrase.Contains("droid"))
-            {
-                PlaySound("Assets/Sounds/droid.wav");
-            }
-            else if (phrase.Contains("star trek") || phrase.Contains("spock"))
-            {
-                PlaySound("Assets/Sounds/livelong.wav");
             }
         }
 

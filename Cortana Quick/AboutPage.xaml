@@ -38,7 +38,7 @@
                 </Button.Foreground>
             </Button>
             <TextBlock Margin="157,10,160,0" TextWrapping="Wrap" Text="@Brianostorm" VerticalAlignment="Top" FontWeight="Bold"/>
-            <Image x:Name ="avatar" Height="242" Margin="107,42,97,0" VerticalAlignment="Top"/>
+            <Image x:Name ="avatar" Height="242" Margin="107,42,97,0" VerticalAlignment="Top" Source="/Assets/briano.png"/>
             <Button Content="Mail-me" HorizontalAlignment="Left" Margin="160,488,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
             <Button Content="" Margin="348,470,10,0" RenderTransformOrigin="0.462,0.557" Click="Button_Click_2" Height="98" VerticalAlignment="Top">
                 <Button.Background>

@@ -164,16 +164,16 @@
     <value>Now, say to her Quick + I + something you want to be remembered later:"</value>
   </data>
   <data name="Tutorial2_2" xml:space="preserve">
-    <value>Quick I Parked my car at sesame street</value>
+    <value>Quick Note Parked my car at sesame street</value>
   </data>
   <data name="Tutorial2_3" xml:space="preserve">
-    <value>Quick I left my keys on my room</value>
+    <value>Quick Note left my keys on my room</value>
   </data>
   <data name="Tutorial2_4" xml:space="preserve">
-    <value>Quick I put my torch on the dining table</value>
+    <value>Quick Note put my torch on the dining table</value>
   </data>
   <data name="Tutorial2_5" xml:space="preserve">
-    <value>Quick I kept my .net book in the my bag</value>
+    <value>Quick Note kept my .net book in the my bag</value>
   </data>
   <data name="Tutorial2_Header" xml:space="preserve">
     <value>taking a note</value>
